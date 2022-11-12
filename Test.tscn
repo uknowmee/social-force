@@ -20,8 +20,8 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="WallsTiles" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
-collision_layer = 3
-collision_mask = 3
+collision_layer = 0
+collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 65557, 2, 0, 196623, 10, 0, 262152, 2, 0, 262159, 10, 0, 327695, 10, 0, 393231, 10, 0, 458767, 10, 0, 524303, 10, 0, 589839, 10, 0, 655375, 10, 0, 720911, 10, 0, 786447, 10, 0, 851983, 10, 0 )
 
@@ -38,7 +38,7 @@ __meta__ = {
 }
 
 [node name="AgentSpawn" parent="." instance=ExtResource( 2 )]
-amount = 20
+amount = 50
 target = NodePath("../Target B")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AgentSpawn"]
@@ -46,7 +46,7 @@ position = Vector2( 786, 458 )
 shape = SubResource( 1 )
 
 [node name="AgentSpawn2" parent="." instance=ExtResource( 2 )]
-amount = 15
+amount = 50
 target = NodePath("../Target A")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AgentSpawn2"]
