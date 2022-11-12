@@ -1,9 +1,14 @@
 extends Area2D
+var agentScene = preload("res://Agent.tscn")
 
 export var amount = 10
 export(NodePath) var target = null
 export var spawn_per_second = 0; 
-var agentScene = preload("res://Agent.tscn")
+export var randomize_raycast_angle = 30;
+export var ranzomize_radius = 0;
+export var randomize_raycast_distance = 20;
+export var randomize_max_speed = 30;
+export var randomize_relaxation_time = 0.5;
 
 onready var agentContainer = $"../Agents"
 onready var collisionShape = get_node("CollisionShape2D")
@@ -30,6 +35,11 @@ func spawn_child():
 	instance.position = get_random_pos_inside_shape()
 	instance.target = target_node;
 	instance.modulateColor = modulateColor;
+	instance.raycastDistance = instance.raycastDistance + rand_range(-randomize_raycast_distance, randomize_raycast_distance);
+	instance.maximumRaycastAngle = instance.maximumRaycastAngle + rand_range(-randomize_raycast_angle, randomize_raycast_angle);
+	instance.radius = instance.radius + rand_range(-ranzomize_radius, ranzomize_radius);
+	instance.maximumVelocity = instance.maximumVelocity + rand_range(-randomize_max_speed, randomize_max_speed);
+	instance.relaxationTime = instance.relaxationTime + rand_range(-randomize_relaxation_time, randomize_relaxation_time);
 	self.agentContainer.add_child(instance)
 
 func get_random_pos_inside_shape():
@@ -42,5 +52,5 @@ func get_random_pos_inside_shape():
 	return rng_pos
 
 func _on_Timer_timeout():
-	for i in range(spawn_per_second):
+	for _i in range(spawn_per_second):
 		spawn_child()

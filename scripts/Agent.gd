@@ -7,7 +7,7 @@ export var maximumVelocity = 100.0
 export var weight = 1.0
 export var maximumRaycastAngle = 120;
 export var raycastDistance = 100;
-export var relaxationTime = 1;
+export var relaxationTime = 1.5;
 
 onready var raycast = $RayCast2D;
 onready var sprite = $Sprite;
@@ -19,7 +19,7 @@ var modulateColor = null
 
 func _ready():
 	randomize()
-	self.set_radius(radius)
+	self.set_radius()
 	raycast.cast_to = Vector2(raycastDistance, 0)
 	sprite.modulate = modulateColor;
 
@@ -75,10 +75,11 @@ func raycast_distance_at_angle(angle):
 	else:
 		return raycastDistance;
 
-func set_radius(rd):
-	self.radius = rd
+func set_radius():
 	var shape = get_node("CollisionShape2D").shape
 	shape.set_radius(self.radius)
+	# original sprite size is 128x128, scale it to fit the radius
+	sprite.scale = Vector2(self.radius / 128, self.radius / 128)
 
 func has_reached_target():
 	return self.radius > self.position.distance_to(target.position);
