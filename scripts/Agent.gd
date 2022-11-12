@@ -17,6 +17,9 @@ var reached_target = false
 var target = null
 var modulateColor = null
 
+var desired_direction = 0;
+var desired_velocity = Vector2(0,0);
+
 func _ready():
 	randomize()
 	self.set_radius()
@@ -30,17 +33,17 @@ func _process(_dt):
 		return
 	
 	# construct desired velocity from distance and angle
-	var desired_speed = get_desired_speed()
-	var desired_direction = get_desired_direction()
-	var desired_velocity = Vector2(desired_speed, 0);
+	desired_direction = get_desired_direction()
+	desired_velocity = Vector2(get_desired_speed(), 0);
 	
 	rotation_degrees = rotation_degrees + desired_direction;
-	
-	velocity = move_and_slide(desired_velocity.rotated(rotation))
 	
 	if has_reached_target():
 		print("Agent reached target!")
 		queue_free()
+
+func _physics_process(delta):
+	velocity = move_and_slide(desired_velocity.rotated(rotation))
 
 func get_desired_speed():
 	var dist = raycast_distance_at_angle(0) / relaxationTime;
@@ -49,7 +52,7 @@ func get_desired_speed():
 func get_desired_direction():
 	var best_angle = null;
 	var best_distance = null;
-	for step in range(maximumRaycastAngle / 2):
+	for step in range(0, maximumRaycastAngle / 2, 2):
 		for direction in ([1] if step == 0 else [1, -1]):
 			var dir = step * direction
 			var distance = cognitive_heuristic(dir);
