@@ -5,11 +5,11 @@ export var radius = 35.0
 
 export var maximumVelocity = 50.0
 export var weight = 1.0
-export var maximumRaycastAngle = 20;
-export var raycastDistance = 150;
+export var maximumRaycastAngle = 30;
+export var raycastDistance = 60;
 export var relaxationTime = 1;
 
-onready var raycasts = $Raycasts.get_children();
+onready var raycast = $RayCast2D;
 
 var velocity = Vector2(0, 0)
 var reached_target = false
@@ -18,33 +18,58 @@ var target = null
 func _ready():
 	randomize()
 	self.set_radius(radius)
+	raycast.cast_to = Vector2(raycastDistance, 0)
 
-func _process(dt):
+func _process(_dt):
 	if not target:
 		push_warning("Agent has no target");
 		set_process(false);
 		return
 	
+	# construct desired velocity from distance and angle
+	var desired_speed = get_desired_speed()
+	var desired_direction = get_desired_direction()
+	var desired_velocity = Vector2(desired_speed, 0);
+	rotation = rotation + desired_direction;
+	
+	velocity = move_and_slide(desired_velocity)
 	
 	if has_reached_target():
 		print("Agent reached target!")
 		queue_free()
 
-#alpha_des(t)
+func get_desired_speed():
+	var dist = raycast_distance_at_angle(0) / relaxationTime;
+	return min(maximumVelocity, dist);
+
 func get_desired_direction():
-	pass
+	var best_angle = null;
+	var best_distance = null;
+	for step in range(maximumRaycastAngle / 2):
+		for direction in ([1] if step == 0 else [1, -1]):
+			var dir = step * direction
+			var distance = cognitive_heuristic(dir);
+			if best_distance == null or distance > best_distance:
+				best_distance = distance;
+				best_angle = dir;
+	return deg2rad(best_angle)
+
+# d(alpha)
+func cognitive_heuristic(angle):
+	var dist_to_collision = raycast_distance_at_angle(angle);
+	var direction_to_target = position.angle_to_point(target.position);
+	var global_angle = deg2rad(angle) + rotation;
+	var penalty = 2 * raycastDistance * dist_to_collision * cos(direction_to_target - global_angle)
+	return pow(raycastDistance, 2) + pow(dist_to_collision, 2) - penalty;
 
 # f(alpha)
-func get_closest_visible_obstacle():
-	var closest_body = null;
-	var distance_to_body = raycastDistance;
-	for raycast in raycasts:
-		if raycast.is_colliding():
-			var dist = position.distance_to(raycast.get_collision_point());
-			if (dist < distance_to_body):
-				closest_body = raycast.get_collider();
-				distance_to_body = dist;
-	return [closest_body, distance_to_body]
+func raycast_distance_at_angle(angle):
+	raycast.rotation_degrees = angle;
+	raycast.force_raycast_update();
+	if raycast.is_colliding():
+		return position.distance_to(raycast.get_collision_point());
+	else:
+		return raycastDistance;
 
 func set_radius(rd):
 	self.radius = rd
