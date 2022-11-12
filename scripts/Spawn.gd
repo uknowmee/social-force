@@ -18,8 +18,7 @@ func _ready():
 	self.shape = shape_owner_get_shape(shape_owners[0], 0)
 	
 	var target_node = get_node(self.target)
-	for i in range(amount):
-		print(target_node)
+	for _i in range(amount):
 		var instance = agentScene.instance()
 		instance.position = get_random_pos_inside_shape()
 		instance.target = target_node
@@ -28,11 +27,8 @@ func _ready():
 func get_random_pos_inside_shape():
 	var center = self.collisionShape.position + self.position
 	var extents = shape.extents
-	print(center)
-	print(extents)
 	var rng_pos = Vector2(
 		rand_range(center.x - extents.x, center.x + extents.x),
 		rand_range(center.y - extents.y, center.y + extents.y)
 	)
-	print(rng_pos)
 	return rng_pos

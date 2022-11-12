@@ -38,6 +38,7 @@ __meta__ = {
 
 [node name="AgentSpawn" type="Area2D" parent="."]
 script = ExtResource( 2 )
+amount = 1
 target = NodePath("../Target A")
 
 [node name="Shape" type="CollisionShape2D" parent="AgentSpawn"]
