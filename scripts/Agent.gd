@@ -3,22 +3,25 @@ extends KinematicBody2D
 export var mass = 1.0
 export var radius = 35.0
 
-export var maximumVelocity = 50.0
+export var maximumVelocity = 100.0
 export var weight = 1.0
-export var maximumRaycastAngle = 30;
-export var raycastDistance = 60;
+export var maximumRaycastAngle = 120;
+export var raycastDistance = 100;
 export var relaxationTime = 1;
 
 onready var raycast = $RayCast2D;
+onready var sprite = $Sprite;
 
 var velocity = Vector2(0, 0)
 var reached_target = false
 var target = null
+var modulateColor = null
 
 func _ready():
 	randomize()
 	self.set_radius(radius)
 	raycast.cast_to = Vector2(raycastDistance, 0)
+	sprite.modulate = modulateColor;
 
 func _process(_dt):
 	if not target:
@@ -30,9 +33,10 @@ func _process(_dt):
 	var desired_speed = get_desired_speed()
 	var desired_direction = get_desired_direction()
 	var desired_velocity = Vector2(desired_speed, 0);
-	rotation = rotation + desired_direction;
 	
-	velocity = move_and_slide(desired_velocity)
+	rotation_degrees = rotation_degrees + desired_direction;
+	
+	velocity = move_and_slide(desired_velocity.rotated(rotation))
 	
 	if has_reached_target():
 		print("Agent reached target!")
@@ -52,7 +56,7 @@ func get_desired_direction():
 			if best_distance == null or distance > best_distance:
 				best_distance = distance;
 				best_angle = dir;
-	return deg2rad(best_angle)
+	return best_angle
 
 # d(alpha)
 func cognitive_heuristic(angle):

@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Simulation.gd" type="Script" id=1]
-[ext_resource path="res://scripts/Spawn.gd" type="Script" id=2]
+[ext_resource path="res://AgentSpawn.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tileset.tres" type="TileSet" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 251, 165.5 )
+extents = Vector2( 143.5, 58.625 )
 
 [node name="Simulation" type="Node2D"]
 script = ExtResource( 1 )
@@ -20,28 +20,40 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="WallsTiles" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
+collision_layer = 3
+collision_mask = 3
 format = 1
-tile_data = PoolIntArray( 65557, 2, 0, 131076, 13, 0, 131077, 18, 0, 131078, 12, 0, 131079, 12, 0, 131080, 12, 0, 131081, 12, 0, 131082, 12, 0, 131083, 12, 0, 131084, 12, 0, 131085, 12, 0, 131086, 12, 0, 131087, 12, 0, 131088, 12, 0, 131089, 12, 0, 131090, 12, 0, 131091, 17, 0, 131094, 14, 0, 131095, 18, 0, 131096, 17, 0, 196631, 10, 0, 262149, 10, 0, 262152, 2, 0, 262167, 10, 0, 327685, 10, 0, 327700, 2, 0, 327703, 10, 0, 393221, 10, 0, 393239, 10, 0, 458757, 10, 0, 458775, 10, 0, 524293, 10, 0, 524311, 10, 0, 589829, 10, 0, 589847, 10, 0, 655365, 10, 0, 655383, 10, 0, 720901, 10, 0, 720919, 10, 0, 786437, 10, 0, 786455, 10, 0, 851973, 10, 0, 851991, 10, 0, 917509, 10, 0, 917527, 10, 0, 983045, 10, 0, 983063, 10, 0, 1048581, 15, 0, 1048582, 16, 0, 1048583, 16, 0, 1048584, 16, 0, 1048585, 16, 0, 1048586, 16, 0, 1048587, 16, 0, 1048588, 16, 0, 1048589, 16, 0, 1048590, 16, 0, 1048591, 16, 0, 1048592, 16, 0, 1048593, 16, 0, 1048594, 16, 0, 1048595, 16, 0, 1048596, 16, 0, 1048597, 16, 0, 1048598, 16, 0, 1048599, 17, 0 )
-
-[node name="Walls" type="Node2D" parent="."]
-rotation = 0.00118667
-
-[node name="Line2D" type="Line2D" parent="Walls"]
-points = PoolVector2Array( 635, 121, 163, 121, 163, 518, 742, 517, 741, 67 )
-width = 5.0
+tile_data = PoolIntArray( 65557, 2, 0, 196623, 10, 0, 262152, 2, 0, 262159, 10, 0, 327695, 10, 0, 393231, 10, 0, 458767, 10, 0, 524303, 10, 0, 589839, 10, 0, 655375, 10, 0, 720911, 10, 0, 786447, 10, 0, 851983, 10, 0 )
 
 [node name="Target A" type="Position2D" parent="."]
-position = Vector2( 905, -292 )
+position = Vector2( 758, 455 )
 __meta__ = {
 "_gizmo_extents_": 30.0
 }
 
-[node name="AgentSpawn" type="Area2D" parent="."]
-script = ExtResource( 2 )
+[node name="Target B" type="Position2D" parent="."]
+position = Vector2( 164, 81 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="AgentSpawn" parent="." instance=ExtResource( 2 )]
+amount = 15
+target = NodePath("../Target B")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentSpawn"]
+position = Vector2( 786, 458 )
+shape = SubResource( 1 )
+
+[node name="AgentSpawn2" parent="." instance=ExtResource( 2 )]
+amount = 15
 target = NodePath("../Target A")
 
-[node name="Shape" type="CollisionShape2D" parent="AgentSpawn"]
-position = Vector2( 439, 329 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentSpawn2"]
+position = Vector2( 199, 152 )
 shape = SubResource( 1 )
 
 [node name="Agents" type="Node2D" parent="."]
+
+[editable path="AgentSpawn"]
+[editable path="AgentSpawn2"]
