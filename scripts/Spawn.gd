@@ -9,6 +9,7 @@ export var ranzomize_radius = 0;
 export var randomize_raycast_distance = 20;
 export var randomize_max_speed = 30;
 export var randomize_relaxation_time = 0.5;
+export var randomize_rotation_speed = 0.05;
 
 onready var agentContainer = $"../Agents"
 onready var collisionShape = get_node("CollisionShape2D")
@@ -40,6 +41,7 @@ func spawn_child():
 	instance.radius = instance.radius + rand_range(-ranzomize_radius, ranzomize_radius);
 	instance.maximumVelocity = instance.maximumVelocity + rand_range(-randomize_max_speed, randomize_max_speed);
 	instance.relaxationTime = instance.relaxationTime + rand_range(-randomize_relaxation_time, randomize_relaxation_time);
+	instance.rotationSpeed = instance.rotationSpeed + rand_range(-randomize_rotation_speed, randomize_rotation_speed)
 	self.agentContainer.add_child(instance)
 
 func get_random_pos_inside_shape():
