@@ -3,23 +3,23 @@ extends KinematicBody2D
 export var randomTargetOffset = false;
 export var radius = 35.0
 
-export var maximumVelocity = 100.0
+export var maximumVelocity = 80.0
 export var weight = 1.0
-export var maximumRaycastAngle = 110;
-export var raycastPlacementDensity = 3;
-export var raycastDistance = 100;
-export var relaxationTime = 1.5;
+export var maximumRaycastAngle = 100;
+export var raycastPlacementDensity = 2;
+export var raycastDistance = 150;
+export var relaxationTime = 2;
 export var rotationSpeed = 0.05;
 
 onready var sprite = $Sprite;
 onready var raycastContainer = $Raycasts;
-var rays = [];
+onready var rays = [];
+var frontmost_ray = null;
 
 var velocity = Vector2(0, 0)
 var reached_target = false
 var target = null
 var modulateColor = null
-var targetOffset = Vector2(0, 0)
 
 var desired_direction = 0;
 var desired_velocity = Vector2(0,0);
@@ -29,10 +29,7 @@ func _ready():
 	#self.set_radius()
 	sprite.modulate = modulateColor;
 	generate_raycasts()
-	targetOffset = Vector2(
-		rand_range(-30, 30), rand_range(-30, 30)
-	) if randomTargetOffset else Vector2(0, 0)
-	look_at(target.position + targetOffset)
+	look_at(target.position)
 
 func _process(_dt):
 	if not target:
@@ -49,30 +46,30 @@ func _process(_dt):
 		queue_free()
 
 func _physics_process(delta):
-	velocity = lerp(velocity, desired_velocity, 0.5)
+	velocity = lerp(velocity, desired_velocity, 0.235)
 	velocity = move_and_slide(velocity)
 
 func get_desired_speed():
-	var dist = raycast_distance_to_collision(rays[0]) / relaxationTime;
+	var dist = raycast_distance_to_collision(frontmost_ray) / relaxationTime;
 	return min(maximumVelocity, dist);
 
 func get_desired_direction():
-	var best_angle = null;
+	var best_ray = null;
 	var best_distance = null;
 	for ray in rays:
 		var distance = cognitive_heuristic(ray);
 		if best_distance == null or distance > best_distance:
 			best_distance = distance;
-			best_angle = ray.global_rotation;
-	return best_angle
+			best_ray = ray;
+	return best_ray.rotation + rotation;
 
 # d(alpha)
 func cognitive_heuristic(ray):
 	var dist_to_collision = raycast_distance_to_collision(ray);
-	var direction_to_target = position.angle_to_point(target.position + targetOffset);
-	var global_angle = ray.global_rotation;
+	var direction_to_target = position.angle_to_point(target.position);
+	var global_angle = ray.rotation + rotation;
 	var penalty = 2 * raycastDistance * dist_to_collision * cos(direction_to_target - global_angle)
-	return pow(raycastDistance, 2) + pow(dist_to_collision, 2) - penalty;
+	return sqrt(pow(raycastDistance, 2) + pow(dist_to_collision, 2) - penalty);
 
 # f(alpha)
 func raycast_distance_to_collision(raycast):
@@ -87,9 +84,11 @@ func set_radius():
 	sprite.scale = Vector2(self.radius / 128, self.radius / 128)
 
 func has_reached_target():
-	return self.radius > self.position.distance_to(target.position + targetOffset);
+	return self.radius * 2 > self.position.distance_to(target.position);
 
 func generate_raycasts():
+	for child in raycastContainer.get_children():
+		rays.append(child)
 	for step in range(0, maximumRaycastAngle / 2, raycastPlacementDensity):
 		for direction in ([1] if step == 0 else [1, -1]):
 			var rc = RayCast2D.new();
@@ -98,3 +97,5 @@ func generate_raycasts():
 			rc.enabled = true;
 			raycastContainer.add_child(rc)
 			rays.append(rc)
+			if step * direction == 0:
+				frontmost_ray = rc;

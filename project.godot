@@ -22,6 +22,10 @@ Globals="*res://scripts/Globals.gd"
 
 window/ios/hide_home_indicator=false
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/carmel4a97.RTS_Camera2D/plugin.cfg" )
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
@@ -36,5 +40,6 @@ common/enable_object_picking=false
 [rendering]
 
 quality/driver/fallback_to_gles2=true
+environment/default_clear_color=Color( 0.823529, 0.823529, 0.823529, 1 )
 quality/filters/msaa=3
 environment/default_environment="res://default_env.tres"

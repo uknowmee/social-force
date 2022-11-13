@@ -1,6 +1,7 @@
 extends Area2D
 var agentScene = preload("res://Agent.tscn")
 
+export var enabled = true
 export var amount = 10
 export(NodePath) var target = null
 export var spawn_per_second = 0; 
@@ -28,8 +29,9 @@ func _ready():
 	
 	# random color modulate
 	modulateColor = Color(randf(), randf(), randf())
-	for _i in range(amount):
-		spawn_child()
+	if enabled:
+		for _i in range(amount):
+			spawn_child()
 
 func spawn_child():
 	var instance = agentScene.instance()
