@@ -2,11 +2,11 @@ extends Area2D
 var agentScene = preload("../Agent/Agent.tscn")
 
 export var enabled = true
-export var amount = 10
+export var amount = 8
 export(NodePath) var target = null
 export var spawn_per_second = 0; 
 export var randomize_raycast_angle = 30;
-export var ranzomize_radius = 0;
+export var ranzomize_radius = 2;
 export var randomize_raycast_distance = 20;
 export var randomize_max_speed = 30;
 export var randomize_relaxation_time = 0.5;

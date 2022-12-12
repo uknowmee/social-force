@@ -1,15 +1,16 @@
 extends KinematicBody2D
 
 export var randomTargetOffset = false;
-export var radius = 35.0
+export var radius = 22;
+export(NodePath) var finalTarget = null;
 
-export var maximumVelocity = 80.0
+export var maximumVelocity = 100.0
 export var weight = 1.0
-export var maximumRaycastAngle = 100;
-export var raycastPlacementDensity = 2;
+export var maximumRaycastAngle = 150;
+export var raycastPlacementDensity = 15;
 export var raycastDistance = 150;
-export var relaxationTime = 2;
-export var rotationSpeed = 0.05;
+export var relaxationTime = 1.5;
+export var rotationSpeed = 0.2;
 
 onready var sprite = $Sprite;
 onready var raycastContainer = $Raycasts;
@@ -26,7 +27,11 @@ var desired_velocity = Vector2(0,0);
 
 func _ready():
 	randomize()
-	#self.set_radius()
+	self.set_radius()
+	
+	if self.finalTarget != null:
+		self.target = finalTarget;
+	
 	sprite.modulate = modulateColor;
 	generate_raycasts()
 	look_at(target.position)
@@ -80,8 +85,10 @@ func raycast_distance_to_collision(raycast):
 
 func set_radius():
 	var shape = get_node("CollisionShape2D").shape
-	shape.set_radius(self.radius)
-	sprite.scale = Vector2(self.radius / 128, self.radius / 128)
+	var sprite = get_node("Sprite")
+	sprite.scale = sprite.scale * Vector2(self.radius / shape.radius, self.radius / shape.radius)
+	shape.radius = self.radius
+
 
 func has_reached_target():
 	return self.radius * 2 > self.position.distance_to(target.position);
