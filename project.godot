@@ -16,11 +16,15 @@ config/icon="res://assets/icon.png"
 
 [autoload]
 
-Globals="*res://scenes/simulation/Globals.gd"
+Globals="*res://scenes/simulation/scripts/Globals.gd"
 
 [display]
 
+window/size/width=2100
+window/size/height=1500
+window/size/fullscreen=true
 window/ios/hide_home_indicator=false
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
