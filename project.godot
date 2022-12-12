@@ -11,12 +11,12 @@ config_version=4
 [application]
 
 config/name="Symulacja Dyskretna"
-run/main_scene="res://Test.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://scenes/simulation/H24.tscn"
+config/icon="res://assets/icon.png"
 
 [autoload]
 
-Globals="*res://scripts/Globals.gd"
+Globals="*res://scenes/simulation/Globals.gd"
 
 [display]
 
@@ -29,6 +29,10 @@ enabled=PoolStringArray( "res://addons/carmel4a97.RTS_Camera2D/plugin.cfg" )
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[mono]
+
+project/assembly_name="Symulacja Dyskretna"
 
 [physics]
 

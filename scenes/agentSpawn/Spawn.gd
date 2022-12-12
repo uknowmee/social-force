@@ -1,5 +1,5 @@
 extends Area2D
-var agentScene = preload("res://Agent.tscn")
+var agentScene = preload("../Agent/Agent.tscn")
 
 export var enabled = true
 export var amount = 10
