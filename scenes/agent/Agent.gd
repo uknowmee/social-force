@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
 export var randomTargetOffset = false;
-export var radius = 22;
+export var radius = 22.023;
 export(NodePath) var finalTarget = null;
 
 export var maximumVelocity = 100.0
 export var weight = 1.0
-export var maximumRaycastAngle = 150;
-export var raycastPlacementDensity = 15;
+export var maximumRaycastAngle = 180;
+export var raycastPlacementDensity = 18;
 export var raycastDistance = 150;
 export var relaxationTime = 1.5;
 export var rotationSpeed = 0.2;
@@ -30,11 +30,16 @@ func _ready():
 	self.set_radius()
 	
 	if self.finalTarget != null:
-		self.target = finalTarget;
+		self.target = get_node(finalTarget);
 	
-	sprite.modulate = modulateColor;
+	if modulateColor != null:
+		sprite.modulate = modulateColor;
+	else:
+		modulateColor = Color(randf(), randf(), randf())
+		
 	generate_raycasts()
-	look_at(target.position)
+	if target != null:
+		look_at(target.position);
 
 func _process(_dt):
 	if not target:
@@ -84,10 +89,13 @@ func raycast_distance_to_collision(raycast):
 		return raycastDistance;
 
 func set_radius():
-	var shape = get_node("CollisionShape2D").shape
-	var sprite = get_node("Sprite")
-	sprite.scale = sprite.scale * Vector2(self.radius / shape.radius, self.radius / shape.radius)
-	shape.radius = self.radius
+	var shape = get_node("CollisionShape2D");
+	var oldCollisionRadius = shape.shape.radius;
+	var oldSpriteScale = 2*oldCollisionRadius/128;
+	var newScale = self.radius / oldCollisionRadius;
+	
+	shape.scale = Vector2(newScale, newScale);
+	sprite.scale = oldSpriteScale * Vector2(newScale, newScale);
 
 
 func has_reached_target():

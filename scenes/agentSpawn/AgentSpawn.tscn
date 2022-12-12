@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/agentSpawn/Spawn.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12.25, 195.75 )
+extents = Vector2( 9.5, 210.5 )
 
 [node name="AgentSpawn" type="Area2D"]
 script = ExtResource( 1 )
