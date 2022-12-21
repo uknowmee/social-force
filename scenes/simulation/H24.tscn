@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/TX Tileset Grass.png" type="Texture" id=5]
 [ext_resource path="res://assets/agent.png" type="Texture" id=6]
 [ext_resource path="res://scenes/agent/Agent.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/timer/Timer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/stats/Stats.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 10, 0, 10, 10, 0, 10 )
@@ -193,16 +193,12 @@ script = ExtResource( 2 )
 [node name="RTS-Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1050, 750 )
 current = true
+zoom = Vector2( 3, 3 )
 script = ExtResource( 3 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Timer" parent="CanvasLayer" instance=ExtResource( 8 )]
-position = Vector2( 1, 0 )
-z_index = 4
+[node name="StatsDisplay" parent="." instance=ExtResource( 8 )]
 
 [node name="Background" type="TileMap" parent="."]
-visible = false
 position = Vector2( 1, 0 )
 tile_set = SubResource( 5 )
 cell_size = Vector2( 10, 10 )
