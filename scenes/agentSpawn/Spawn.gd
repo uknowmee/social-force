@@ -35,6 +35,8 @@ func _ready():
 
 func spawn_child():
 	var instance = agentScene.instance()
+	instance.spawner = self.name
+	
 	instance.position = get_random_pos_inside_shape()
 	instance.target = target_node;
 	instance.modulateColor = modulateColor;

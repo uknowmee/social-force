@@ -25,7 +25,13 @@ var modulateColor = null
 var desired_direction = 0;
 var desired_velocity = Vector2(0,0);
 
+var spawner = null
+
+signal agent_reached_target(agent, target, time)
+
 func _ready():
+	connect("agent_reached_target", get_tree().root.get_node("Simulation"), "update_logs")
+	
 	randomize()
 	self.set_radius()
 	
@@ -52,7 +58,9 @@ func _process(_dt):
 	desired_velocity = Vector2(get_desired_speed(), 0).rotated(rotation);
 	
 	if has_reached_target():
-		print("Agent reached target!")
+		emit_signal("agent_reached_target", 
+						spawner, self.name, self.target, Time.get_ticks_usec()
+					)
 		queue_free()
 
 func _physics_process(delta):
