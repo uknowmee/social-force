@@ -1,12 +1,13 @@
 extends Node2D
 
 var agentContainer = null
+var sceneName = ""
 var logs = {}
 var record = {}
-var logsFolder = "logs"
-var dirSeparator = "/"
 
 func _ready():
+	sceneName = self.filename.split("/")[-1].split(".")[0]
+	
 	agentContainer = $"Agents"
 	logs["agents"] = []
 
@@ -26,14 +27,11 @@ func update_logs(spawner, agentName, target, time) -> void:
 		save_logs()
 
 func save_logs():
-	var dir = Directory.new()
-	if (!dir.file_exists(logsFolder)):
-		dir.make_dir(logsFolder)
+	var path = "user://" + sceneName.to_lower() + ".json"
 	
 	var file = File.new()
-	file.open(logsFolder + dirSeparator + self.name.to_lower() + ".json", File.WRITE)
+	file.open(path, File.WRITE)
 	file.store_line(to_json(logs))
 	file.close()
 	
-	print(logs)
 	print("Logs saved")
