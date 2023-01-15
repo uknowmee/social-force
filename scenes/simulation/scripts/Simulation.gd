@@ -20,10 +20,10 @@ func update_logs(spawner, agentName, target, time) -> void:
 	record["spawner"] = spawner
 	record["targetName"] = target.name
 
-	logs["agents"].append(record)
+	logs["agents"].append(record.duplicate())
 	
 	if (agentContainer.get_children().size() == 1):
-		logs["fullTime"] = Time.get_ticks_usec()
+		logs["fullTime"] = Time.get_ticks_msec()
 		save_logs()
 
 func save_logs():

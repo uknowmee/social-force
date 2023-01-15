@@ -12,7 +12,7 @@ export var randomize_max_speed = 30;
 export var randomize_relaxation_time = 0.5;
 export var randomize_rotation_speed = 0.05;
 
-onready var agentContainer = $"../Agents"
+onready var agentContainer = $"../../Agents"
 onready var collisionShape = get_node("CollisionShape2D")
 onready var target_node =  get_node(self.target);
 var shape = null

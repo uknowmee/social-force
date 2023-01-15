@@ -59,7 +59,7 @@ func _process(_dt):
 	
 	if has_reached_target():
 		emit_signal("agent_reached_target", 
-						spawner, self.name, self.target, Time.get_ticks_usec()
+						spawner, self.name, self.target, Time.get_ticks_msec()
 					)
 		queue_free()
 
