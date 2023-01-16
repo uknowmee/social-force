@@ -161,61 +161,61 @@ tile_data = PoolIntArray( 262314, -1073741818, 0, 262315, 1, 0, 262316, 1, 0, 26
 
 [node name="Agent" parent="Agents" instance=ExtResource( 7 )]
 position = Vector2( 1960, 599 )
-targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="Spawners" type="Node2D" parent="."]
 
 [node name="AgentSpawn" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 35, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn2" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 35, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn3" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 137, 983 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn4" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 137, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn5" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 239, 983 )
-targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn6" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 239, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn7" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 338, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn8" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 338, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn9" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 434, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn10" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 434, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn11" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 536, 983 )
-targets = [ NodePath("../../Targets/Target D"), NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target D"), NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn12" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 536, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn13" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 638, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn14" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 638, 553 )
@@ -223,7 +223,7 @@ targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn15" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 734, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn16" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 734, 553 )
@@ -231,75 +231,87 @@ targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn17" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 833, 983 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn18" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 833, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn19" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 938, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn20" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 938, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn21" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1034, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn22" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1034, 553 )
-targets = [ NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn23" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1136, 983 )
-targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target A"), NodePath("../../Targets/Target A2") ]
 
 [node name="AgentSpawn24" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1136, 553 )
-targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn25" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1235, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn26" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1235, 553 )
-targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn27" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1337, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn28" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1337, 553 )
-targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn29" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1436, 983 )
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn30" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1436, 553 )
-targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="AgentSpawn31" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1960, 917 )
 amount = 1
-targets = [ NodePath("../../Targets/Target B") ]
+targets = [ NodePath("../../Targets/Target B"), NodePath("../../Targets/Target B2") ]
 
 [node name="Targets" type="Node2D" parent="."]
 
 [node name="Target A" type="Position2D" parent="Targets"]
-position = Vector2( 1818, -937 )
+position = Vector2( 1823, -38 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="Target A2" type="Position2D" parent="Targets"]
+position = Vector2( 1826, -897 )
 __meta__ = {
 "_gizmo_extents_": 30.0
 }
 
 [node name="Target B" type="Position2D" parent="Targets"]
-position = Vector2( 1834, 2295 )
+position = Vector2( 1824, 1534 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="Target B2" type="Position2D" parent="Targets"]
+position = Vector2( 1840, 2282 )
 __meta__ = {
 "_gizmo_extents_": 30.0
 }
@@ -394,7 +406,7 @@ polygon = PoolVector2Array( 1790, 380, 1931, 379, 1930, 1139, 1791, 1139 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
-polygon = PoolVector2Array( 12, 1379, 11, 150, 1261, 150, 1261, 180, 1712, 180, 1712, 39, 1706, -952, 1652, -948, 1668, 22, -63, 94, -53, 1458, 1676, 1459, 1639, 2320, 1756, 2333, 1712, 1471, 1712, 1359, 1260, 1359, 1260, 1379 )
+polygon = PoolVector2Array( 12, 1379, 11, 150, 1261, 150, 1261, 180, 1712, 180, 1712, 39, 1764, -149, 1762, -946, 1652, -948, 1668, 22, -63, 94, -53, 1458, 1676, 1459, 1639, 2320, 1756, 2325, 1760, 1589, 1712, 1471, 1712, 1359, 1260, 1359, 1260, 1379 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
-polygon = PoolVector2Array( 1940, 1469, 1940, 1279, 2090, 1279, 2089, 1141, 2068, 1140, 2070, 379, 2090, 379, 2089, 231, 1940, 231, 1940, 40, 1940, 38, 1926, -939, 2003, -939, 2003, -940, 1959, 43, 2117, 225, 2122, 1348, 1962, 1454, 2039, 2315, 1913, 2320 )
+polygon = PoolVector2Array( 1940, 1469, 1940, 1279, 2090, 1279, 2089, 1141, 2068, 1140, 2070, 379, 2090, 379, 2089, 231, 1940, 231, 1940, 40, 1940, 38, 1869, -150, 1867, -943, 2003, -939, 2003, -940, 1959, 43, 2117, 225, 2122, 1348, 1962, 1454, 2039, 2315, 1900, 2318, 1892, 1591 )
