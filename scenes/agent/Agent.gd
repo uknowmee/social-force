@@ -2,15 +2,15 @@ extends KinematicBody2D
 
 export var randomTargetOffset = false;
 export var radius = 22.023;
-export(NodePath) var finalTarget = null;
+export(Array, NodePath) var targets = null
 
-export var maximumVelocity = 100.0
+export var maximumVelocity = 80.0
 export var weight = 1.0
 export var maximumRaycastAngle = 180;
 export var raycastPlacementDensity = 18;
 export var raycastDistance = 150;
 export var relaxationTime = 1.5;
-export var rotationSpeed = 0.2;
+export var rotationSpeed = 0.03;
 
 onready var sprite = $Sprite;
 onready var raycastContainer = $Raycasts;
@@ -19,24 +19,26 @@ var frontmost_ray = null;
 
 var velocity = Vector2(0, 0)
 var reached_target = false
-var target = null
 var modulateColor = null
 
 var desired_direction = 0;
 var desired_velocity = Vector2(0,0);
 
+onready var targetNodes = getTargetNodes(self.targets);
+var currentTarget = null
 var spawner = null
 
-signal agent_reached_target(agent, target, time)
+signal agent_reached_target(agent, currentTarget, time)
 
 func _ready():
+	if targetNodes == null:
+		push_warning("No targets specified!")
+		return
+	
 	connect("agent_reached_target", get_tree().root.get_node("Simulation"), "update_logs")
 	
 	randomize()
 	self.set_radius()
-	
-	if self.finalTarget != null:
-		self.target = get_node(finalTarget);
 	
 	if modulateColor != null:
 		sprite.modulate = modulateColor;
@@ -44,11 +46,13 @@ func _ready():
 		modulateColor = Color(randf(), randf(), randf())
 		
 	generate_raycasts()
-	if target != null:
-		look_at(target.position);
+	
+	currentTarget = targetNodes.pop_front()
+	if currentTarget != null:
+		look_at(currentTarget.position);
 
 func _process(_dt):
-	if not target:
+	if not currentTarget:
 		push_warning("Agent has no target");
 		set_process(false);
 		return
@@ -59,12 +63,19 @@ func _process(_dt):
 	
 	if has_reached_target():
 		emit_signal("agent_reached_target", 
-						spawner, self.name, self.target, Time.get_ticks_msec()
+						spawner,
+						self.name,
+						self.currentTarget,
+						targetNodes.size() == 0,
+						Time.get_ticks_msec()
 					)
-		queue_free()
+		if targetNodes.size() != 0:
+			currentTarget = targetNodes.pop_front()
+		else:
+			queue_free()
 
 func _physics_process(delta):
-	velocity = lerp(velocity, desired_velocity, 0.235)
+	velocity = lerp(velocity, desired_velocity, 0.2)
 	velocity = move_and_slide(velocity)
 
 func get_desired_speed():
@@ -84,7 +95,7 @@ func get_desired_direction():
 # d(alpha)
 func cognitive_heuristic(ray):
 	var dist_to_collision = raycast_distance_to_collision(ray);
-	var direction_to_target = position.angle_to_point(target.position);
+	var direction_to_target = position.angle_to_point(currentTarget.position);
 	var global_angle = ray.rotation + rotation;
 	var penalty = 2 * raycastDistance * dist_to_collision * cos(direction_to_target - global_angle)
 	return sqrt(pow(raycastDistance, 2) + pow(dist_to_collision, 2) - penalty);
@@ -107,7 +118,10 @@ func set_radius():
 
 
 func has_reached_target():
-	return self.radius * 2 > self.position.distance_to(target.position);
+	if	targetNodes.size() > 0:
+		return self.radius * 2 + 50 > self.position.distance_to(currentTarget.position);
+	else:
+		return self.radius * 2 > self.position.distance_to(currentTarget.position);
 
 func generate_raycasts():
 	for child in raycastContainer.get_children():
@@ -122,3 +136,12 @@ func generate_raycasts():
 			rays.append(rc)
 			if step * direction == 0:
 				frontmost_ray = rc;
+
+func getTargetNodes(targets):
+	if targets == null || targets.size() == 0:
+		return null
+	
+	var targetNodes = []
+	for targetNode in targets:
+		targetNodes.append(get_node(targetNode))
+	return targetNodes

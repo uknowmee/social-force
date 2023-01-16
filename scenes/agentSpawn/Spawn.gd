@@ -3,24 +3,23 @@ var agentScene = preload("../agent/Agent.tscn")
 
 export var enabled = true
 export var amount = 8
-export(NodePath) var target = null
+export(Array, NodePath) var targets = null
 export var spawn_per_second = 0; 
 export var randomize_raycast_angle = 30;
 export var ranzomize_radius = 2.5;
 export var randomize_raycast_distance = 20;
-export var randomize_max_speed = 30;
-export var randomize_relaxation_time = 0.5;
-export var randomize_rotation_speed = 0.05;
+export var randomize_max_speed = 20;
+export var randomize_relaxation_time = 0.2;
+export var randomize_rotation_speed = 0.02;
 
 onready var agentContainer = $"../../Agents"
 onready var collisionShape = get_node("CollisionShape2D")
-onready var target_node =  get_node(self.target);
 var shape = null
 var modulateColor = null
 
 func _ready():
-	if not target:
-		push_warning("No target specified!")
+	if targets == null || targets.size() == 0:
+		push_warning("No targets specified!")
 		return
 	
 	randomize()
@@ -38,7 +37,7 @@ func spawn_child():
 	instance.spawner = self.name
 	
 	instance.position = get_random_pos_inside_shape()
-	instance.target = target_node;
+	instance.targets = targets;
 	instance.modulateColor = modulateColor;
 	instance.raycastDistance = instance.raycastDistance + rand_range(-randomize_raycast_distance, randomize_raycast_distance);
 	instance.maximumRaycastAngle = instance.maximumRaycastAngle + rand_range(-randomize_raycast_angle, randomize_raycast_angle);

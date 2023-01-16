@@ -11,18 +11,19 @@ func _ready():
 	agentContainer = $"Agents"
 	logs["agents"] = []
 
-func update_logs(spawner, agentName, target, time) -> void:
+func update_logs(spawner, agentName, target, isLastTarget, time) -> void:
 	record.clear()
 	
 	record["agent"] = agentName
 	record["elapsedTime"] = time
+	record["isLastTarget"] = isLastTarget
 	record["position"] = target.position
 	record["spawner"] = spawner
 	record["targetName"] = target.name
 
 	logs["agents"].append(record.duplicate())
 	
-	if (agentContainer.get_children().size() == 1):
+	if (agentContainer.get_children().size() == 1 && isLastTarget):
 		logs["fullTime"] = Time.get_ticks_msec()
 		save_logs()
 
