@@ -161,7 +161,7 @@ tile_data = PoolIntArray( 262314, -1073741818, 0, 262315, 1, 0, 262316, 1, 0, 26
 
 [node name="Agent" parent="Agents" instance=ExtResource( 7 )]
 position = Vector2( 1960, 599 )
-targets = [ NodePath(""), NodePath("../../Targets/Target A") ]
+targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="Spawners" type="Node2D" parent="."]
 

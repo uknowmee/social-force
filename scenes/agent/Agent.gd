@@ -4,13 +4,13 @@ export var randomTargetOffset = false;
 export var radius = 22.023;
 export(Array, NodePath) var targets = null
 
-export var maximumVelocity = 80.0
+export var maximumVelocity = 70.0
 export var weight = 1.0
 export var maximumRaycastAngle = 180;
 export var raycastPlacementDensity = 18;
 export var raycastDistance = 150;
 export var relaxationTime = 1.5;
-export var rotationSpeed = 0.03;
+export var rotationSpeed = 0.1;
 
 onready var sprite = $Sprite;
 onready var raycastContainer = $Raycasts;

@@ -167,122 +167,152 @@ targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target A
 
 [node name="AgentSpawn" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 35, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn2" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 35, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn3" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 137, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn4" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 137, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn5" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 239, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn6" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 239, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn7" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 338, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn8" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 338, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn9" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 434, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn10" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 434, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn11" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 536, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target D"), NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn12" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 536, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn13" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 638, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn14" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 638, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn15" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 734, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn16" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 734, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn17" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 833, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn18" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 833, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn19" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 938, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn20" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 938, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn21" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1034, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn22" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1034, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn23" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1136, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target A") ]
 
 [node name="AgentSpawn24" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1136, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target E"), NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn25" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1235, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn26" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1235, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn27" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1337, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn28" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1337, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn29" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1436, 983 )
+amount = 7
 targets = [ NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn30" parent="Spawners" instance=ExtResource( 4 )]
 position = Vector2( 1436, 553 )
+amount = 7
 targets = [ NodePath("../../Targets/Target C"), NodePath("../../Targets/Target B") ]
 
 [node name="AgentSpawn31" parent="Spawners" instance=ExtResource( 4 )]
