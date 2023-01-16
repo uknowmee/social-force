@@ -10,6 +10,7 @@ func _ready():
 	
 	agentContainer = $"Agents"
 	logs["agents"] = []
+	logs["chairs"] = []
 
 func update_logs(spawner, agentName, target, isLastTarget, time) -> void:
 	record.clear()
@@ -26,6 +27,9 @@ func update_logs(spawner, agentName, target, isLastTarget, time) -> void:
 	if (agentContainer.get_children().size() == 1 && isLastTarget):
 		logs["fullTime"] = Time.get_ticks_msec()
 		save_logs()
+
+func update_logs_chairs(time) -> void:
+	logs["chairs"].append(time)
 
 func save_logs():
 	var path = "user://" + sceneName.to_lower() + ".json"
