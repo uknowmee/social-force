@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyp56r0wbn3ay"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22m6a"]
+size = Vector2(4, 56)
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(1048, 544)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_22m6a")

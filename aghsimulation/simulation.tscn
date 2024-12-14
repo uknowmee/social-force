@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmws45irr7qxt"]
+
+[ext_resource type="PackedScene" uid="uid://bnr042bo878t0" path="res://agent.tscn" id="1_od08q"]
+
+[node name="Simulation" type="Node2D"]
+
+[node name="Agents" type="Node2D" parent="."]
+
+[node name="Agent" parent="Agents" instance=ExtResource("1_od08q")]
+position = Vector2(236, 279)
+targets = Array[NodePath]([NodePath("../../Targets/Target A")])
+
+[node name="Spawners" type="Node2D" parent="."]
+
+[node name="Targets" type="Node2D" parent="."]
+
+[node name="Target A" type="Marker2D" parent="Targets"]
+position = Vector2(614, 626)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
+polygon = PackedVector2Array(0, 2, 1151, -1, 1153, 646, 661, 646, 661, 594, 1081, 594, 1081, 42, 0, 42)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
+polygon = PackedVector2Array(2, 44, 2, 646, 556, 646, 553, 594, 35, 597, 35, 44)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
+position = Vector2(8, -165)
+scale = Vector2(0.922975, 1.36397)
+polygon = PackedVector2Array(35, 402, 535.924, 400, 537.086, 450, 35, 451)
