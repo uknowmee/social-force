@@ -1,4 +1,4 @@
-# Agent systems - Project classes
+ï»¿# [Social Force docs](README.md) - Project classes
 
 In the project part of the course, you will have to create a model, perform simulations, and critically analyze the results.
 
@@ -7,7 +7,7 @@ In the project part of the course, you will have to create a model, perform simu
 A grade is the mean value of all grades received during the course. In order to complete project class, you need to get a positive grade (at least 3.0) and present the *working* project.
 
 During each class, groups will present their progress so far according to the project schedule. Presentations will be graded. Be prepared for the discussion and questions from the audience!
-  
+
 ### 1st meeting - Introduction
 
 General introduction to the field, groups, topics, data, schedule, etc. After this meeting, we should already have groups (2-3 students) and topics. During this gathering, we will discuss the general requirements for each group, and each group will propose the subject of their project.
@@ -39,7 +39,7 @@ You are strongly encouraged to propose your own topic.
 Keywords: complex systems, agent-based modelling, cellular automata.
 
 
-1) Tram network simulation (for example in Kraków) the purpose of the project is to create a simulator of tram network operation. Tram lines are placed on a map and vechicles move along these lines. We assume a real timetable taken from the network. The project should include a prediction of vehicle filling depending on the line, stop and time of day (approximately), the representation of filling can be by color scale. 
+1) Tram network simulation (for example in Krakï¿½w) the purpose of the project is to create a simulator of tram network operation. Tram lines are placed on a map and vechicles move along these lines. We assume a real timetable taken from the network. The project should include a prediction of vehicle filling depending on the line, stop and time of day (approximately), the representation of filling can be by color scale.
 2) Daily cycle traffic prediction based on Darmstadt data - the model does not need to be accurate (at the level of individual lanes), but should take into account the volume of traffic in different areas of the city depending on the daily cycle. Example data: https://github.com/browarsoftware/darmstadt_download
 3) Car traffic prediction - the project includes analysis of car traffic, extraction of basic vehicle attributes and simulation of traffic based on a modified Nagel-Schreckenberg model. The goal of the project will be to track the mechanism of traffic jam formation, and the change in traffic volume in some small part of the road system - comparing actual results and simulations. Example data: https://github.com/browarsoftware/darmstadt_download
 4) Simulation of human traffic in a shopping center/gallery (for example, a selected one in Krakow) - the purpose of the project is to create a simulator of customer traffic in a shopping center. The timing of store opening, rush hour, closing should be taken into account.
