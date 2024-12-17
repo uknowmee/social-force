@@ -27,20 +27,24 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 196623, 10, 0, 262159, 10, 0, 327695, 10, 0, 393231, 10, 0, 655375, 10, 0, 720911, 10, 0, 786447, 10, 0, 851983, 10, 0 )
 
-[node name="Target A" type="Position2D" parent="."]
+[node name="Targets" type="Node2D" parent="."]
+
+[node name="Target A" type="Position2D" parent="Targets"]
 position = Vector2( 911, 514 )
 __meta__ = {
 "_gizmo_extents_": 30.0
 }
 
-[node name="Target B" type="Position2D" parent="."]
+[node name="Target B" type="Position2D" parent="Targets"]
 position = Vector2( 915, 107 )
 __meta__ = {
 "_gizmo_extents_": 30.0
 }
 
-[node name="AgentSpawn" parent="." instance=ExtResource( 3 )]
+[node name="Spawners" type="Node2D" parent="."]
+
+[node name="AgentSpawn" parent="Spawners" instance=ExtResource( 3 )]
 position = Vector2( 142, 270 )
-target = NodePath("../Target A")
+targets = [ NodePath("../../Targets/Target A"), NodePath("../../Targets/Target B") ]
 
 [node name="Agents" type="Node2D" parent="."]
