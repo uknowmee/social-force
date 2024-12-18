@@ -48,6 +48,8 @@ func _ready():
 	currentTarget = targetNodes.pop_front()
 	if currentTarget != null:
 		look_at(currentTarget.position);
+		
+	set_motion_mode(MOTION_MODE_FLOATING)
 
 func _process(_dt):
 	if not currentTarget:
