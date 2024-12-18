@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/stats/stats.gd" id="1_wa7yw"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Stats" type="CanvasLayer"]
 script = ExtResource("1_wa7yw")
 
 [node name="Control" type="Control" parent="."]
