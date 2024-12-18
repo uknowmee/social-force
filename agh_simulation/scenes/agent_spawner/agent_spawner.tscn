@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://je70trdethj3"]
+
+[ext_resource type="Script" path="res://scenes/agent_spawner/agent_spawner.gd" id="1_8r72y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqsjx"]
+size = Vector2(64, 384)
+
+[node name="AgentSpawn" type="Area2D"]
+script = ExtResource("1_8r72y")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qqsjx")

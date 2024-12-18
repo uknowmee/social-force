@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 @export var maximumVelocity = 70.0
 @export var weight = 1.0
-@export var maximumRaycastAngle = 2 * PI
+@export var maximumRaycastAngle = 180
 @export var raycastPlacementDensity = 18
 @export var raycastDistance = 150
 @export var relaxationTime = 1.5
@@ -23,15 +23,12 @@ var modulateColor = null
 var desired_direction = 0
 var desired_velocity = Vector2(0,0)
 
-@onready var targetNodes = getTargetNodes(self.targets);
+@onready var targetNodes = getTargetNodes();
 var currentTarget = null
 var spawner = null
 
 signal agent_reached_target(agent, currentTarget, time)
 
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 
 func _ready():
 	if targetNodes == null:
@@ -75,7 +72,7 @@ func _process(_dt):
 		else:
 			queue_free()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	velocity = lerp(velocity, desired_velocity, 0.2)
 	move_and_slide()
 	
@@ -96,7 +93,7 @@ func get_desired_direction():
 # d(alpha)
 func cognitive_heuristic(ray):
 	var dist_to_collision = raycast_distance_to_collision(ray);
-	var direction_to_target = position.angle_to_point(currentTarget.position);
+	var direction_to_target = currentTarget.position.angle_to_point(position);
 	var global_angle = ray.rotation + rotation;
 	var penalty = 2 * raycastDistance * dist_to_collision * cos(direction_to_target - global_angle)
 	return sqrt(pow(raycastDistance, 2) + pow(dist_to_collision, 2) - penalty);
@@ -126,22 +123,22 @@ func has_reached_target():
 func generate_raycasts():
 	for child in raycastContainer.get_children():
 		rays.append(child)
-	for step in range(0, maximumRaycastAngle / 2, raycastPlacementDensity):
+	for step in range(0, (maximumRaycastAngle / 2 + 1), raycastPlacementDensity):
 		for direction in ([1] if step == 0 else [1, -1]):
 			var rc = RayCast2D.new();
 			rc.target_position = Vector2(raycastDistance, 0)
-			rc.rotation = step * direction;
+			rc.rotation = deg_to_rad(step * direction);
 			rc.enabled = true;
 			raycastContainer.add_child(rc)
 			rays.append(rc)
 			if step * direction == 0:
 				frontmost_ray = rc;
 
-func getTargetNodes(targets):
+func getTargetNodes():
 	if targets == null || targets.size() == 0:
 		return null
 	
-	var targetNodes = []
+	var nodes = []
 	for targetNode in targets:
-		targetNodes.append(get_node(targetNode))
-	return targetNodes
+		nodes.append(get_node(targetNode))
+	return nodes
