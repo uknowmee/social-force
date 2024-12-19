@@ -17,8 +17,8 @@ var agentScene := preload("../agent/agent.tscn")
 @onready var agentContainer := $"../../Agents"
 @onready var collisionShape: CollisionShape2D = get_node("CollisionShape2D")
 
-var shape: RectangleShape2D;
-var modulateColor: Color;
+var shape: RectangleShape2D
+var modulateColor: Color
 var time_since_last_spawn := 0.0
 
 
@@ -43,13 +43,13 @@ func _spawn_child() -> void:
 	instance.spawner = name
 
 	instance.position = _get_random_pos()
-	instance.targets = targets;
-	instance.modulateColor = modulateColor;
-	instance.raycastDistance = instance.raycastDistance + randf_range(-randomize_raycast_distance, randomize_raycast_distance);
-	instance.maximumRaycastAngle = instance.maximumRaycastAngle + randf_range(-randomize_raycast_angle, randomize_raycast_angle);
-	instance.radius = instance.radius + randf_range(-ranzomize_radius, ranzomize_radius);
-	instance.maximumVelocity = instance.maximumVelocity + randf_range(-randomize_max_speed, randomize_max_speed);
-	instance.relaxationTime = instance.relaxationTime + randf_range(-randomize_relaxation_time, randomize_relaxation_time);
+	instance.targets = targets
+	instance.modulateColor = modulateColor
+	instance.raycastDistance = instance.raycastDistance + randf_range(-randomize_raycast_distance, randomize_raycast_distance)
+	instance.maximumRaycastAngle = instance.maximumRaycastAngle + randf_range(-randomize_raycast_angle, randomize_raycast_angle)
+	instance.radius = instance.radius + randf_range(-ranzomize_radius, ranzomize_radius)
+	instance.maximumVelocity = instance.maximumVelocity + randf_range(-randomize_max_speed, randomize_max_speed)
+	instance.relaxationTime = instance.relaxationTime + randf_range(-randomize_relaxation_time, randomize_relaxation_time)
 	instance.rotationSpeed = instance.rotationSpeed + randf_range(-randomize_rotation_speed, randomize_rotation_speed)
 	agentContainer.add_child(instance)
 

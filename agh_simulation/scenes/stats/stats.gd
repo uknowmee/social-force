@@ -11,5 +11,5 @@ func _process(_dt: float) -> void:
 	phyfcountLabel.text = "Physics frames count: " + str(Engine.get_physics_frames())
 	processfcountLabel.text = "Process frames count: " + str(Engine.get_process_frames())
 	fpsLabel.text = "FPS: " + str(Engine.get_frames_per_second())
-	var ticks := Time.get_ticks_msec();
-	enginetimeLabel.text = "Engine ticks (ms): " + str(ticks);
+	var ticks := Time.get_ticks_msec()
+	enginetimeLabel.text = "Engine ticks (ms): " + str(ticks)
