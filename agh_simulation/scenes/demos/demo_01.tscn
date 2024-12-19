@@ -12,16 +12,9 @@
 
 [node name="Agent" parent="Agents" instance=ExtResource("1_ij0fu")]
 position = Vector2(559, 113)
-randomTargetOffset = null
-radius = null
 targets = Array[NodePath]([NodePath("../../Targets/TargetA"), NodePath("../../Targets/TargetB"), NodePath("../../Targets/TargetC")])
-maximumVelocity = null
-weight = null
 maximumRaycastAngle = 120
 raycastPlacementDensity = 20
-raycastDistance = null
-relaxationTime = null
-rotationSpeed = null
 
 [node name="Spawners" type="Node2D" parent="."]
 

@@ -1,5 +1,4 @@
 extends Area2D
-
 class_name AgentSpawner
 
 var agentScene := preload("../agent/agent.tscn")
@@ -36,14 +35,14 @@ func _ready() -> void:
 	modulateColor = Color(randf(), randf(), randf())
 	if enabled:
 		for _i in range(amount):
-			spawn_child()
+			_spawn_child()
 
 
-func spawn_child() -> void:
+func _spawn_child() -> void:
 	var instance := agentScene.instantiate() as Agent
 	instance.spawner = name
 
-	instance.position = get_random_pos()
+	instance.position = _get_random_pos()
 	instance.targets = targets;
 	instance.modulateColor = modulateColor;
 	instance.raycastDistance = instance.raycastDistance + randf_range(-randomize_raycast_distance, randomize_raycast_distance);
@@ -55,13 +54,13 @@ func spawn_child() -> void:
 	agentContainer.add_child(instance)
 
 
-func get_random_pos() -> Vector2:
-	var center           := collisionShape.position + position
-	var extents          := shape.size / 2
-	var rng_pos: Vector2 =  Vector2(
-								center.x,
-								randf_range(center.y - extents.y, center.y + extents.y)
-							)
+func _get_random_pos() -> Vector2:
+	var center := collisionShape.position + position
+	var extents := shape.size / 2
+	var rng_pos: Vector2 = Vector2(
+		center.x,
+		randf_range(center.y - extents.y, center.y + extents.y)
+	)
 	return rng_pos
 
 
@@ -72,5 +71,5 @@ func _process(delta: float) -> void:
 	time_since_last_spawn += delta
 	var spawns := int(time_since_last_spawn * spawn_per_second)
 	for _i in range(spawns):
-		spawn_child()
+		_spawn_child()
 	time_since_last_spawn -= spawns / spawn_per_second

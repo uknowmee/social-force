@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 class_name Agent
 
 @export var randomTargetOffset := false
@@ -19,11 +18,11 @@ class_name Agent
 
 var frontmost_ray: RayCast2D;
 var modulateColor: Variant;
-var reached_target    := false
+var reached_target := false
 var desired_direction := 0.0
-var desired_velocity  := Vector2(0, 0)
+var desired_velocity := Vector2(0, 0)
 
-@onready var targetNodes: Array[Node2D] = getTargetNodes();
+@onready var targetNodes: Array[Node2D] = _getTargetNodes();
 
 var currentTarget: Node2D = null
 var spawner: StringName = "None"
@@ -36,14 +35,14 @@ func _ready() -> void:
 		return
 
 	randomize()
-	set_radius()
+	_set_radius()
 
 	if modulateColor != null:
 		sprite.modulate = modulateColor;
 	else:
 		modulateColor = Color(randf(), randf(), randf())
 
-	generate_raycasts()
+	_generate_raycasts()
 
 	currentTarget = targetNodes.pop_front()
 	if currentTarget != null:
@@ -58,11 +57,11 @@ func _process(_dt: float) -> void:
 		set_process(false);
 		return
 
-	desired_direction = get_desired_direction()
+	desired_direction = _get_desired_direction()
 	rotation = lerp(rotation, desired_direction, rotationSpeed)
-	desired_velocity = Vector2(get_desired_speed(), 0).rotated(rotation);
+	desired_velocity = Vector2(_get_desired_speed(), 0).rotated(rotation);
 
-	if has_reached_target():
+	if _has_reached_target():
 		emit_signal(
 			"agent_reached_target",
 			spawner,
@@ -82,16 +81,16 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 
-func get_desired_speed() -> float:
-	var dist := raycast_distance_to_collision(frontmost_ray) / relaxationTime;
+func _get_desired_speed() -> float:
+	var dist := _raycast_distance_to_collision(frontmost_ray) / relaxationTime;
 	return min(maximumVelocity, dist);
 
 
-func get_desired_direction() -> float:
+func _get_desired_direction() -> float:
 	var best_ray: RayCast2D;
 	var best_distance: float;
 	for ray in rays:
-		var distance := cognitive_heuristic(ray);
+		var distance := _cognitive_heuristic(ray);
 		if best_distance == null or distance > best_distance:
 			best_distance = distance;
 			best_ray = ray;
@@ -99,8 +98,8 @@ func get_desired_direction() -> float:
 
 
 # d(alpha)
-func cognitive_heuristic(ray: RayCast2D) -> float:
-	var dist_to_collision := raycast_distance_to_collision(ray);
+func _cognitive_heuristic(ray: RayCast2D) -> float:
+	var dist_to_collision := _raycast_distance_to_collision(ray);
 	var direction_to_target: float = currentTarget.position.angle_to_point(position);
 	var global_angle := ray.rotation + rotation;
 	var penalty: float = 2 * raycastDistance * dist_to_collision * cos(direction_to_target - global_angle)
@@ -108,14 +107,14 @@ func cognitive_heuristic(ray: RayCast2D) -> float:
 
 
 # f(alpha)
-func raycast_distance_to_collision(ray: RayCast2D) -> float:
+func _raycast_distance_to_collision(ray: RayCast2D) -> float:
 	if ray.is_colliding():
 		return position.distance_to(ray.get_collision_point());
 	else:
 		return raycastDistance;
 
 
-func set_radius() -> void:
+func _set_radius() -> void:
 	var shapeNode: CollisionShape2D = get_node("CollisionShape2D");
 	var shape: CircleShape2D = shapeNode.shape;
 	var oldCollisionRadius := shape.radius;
@@ -126,14 +125,14 @@ func set_radius() -> void:
 	sprite.scale = oldSpriteScale * Vector2(newScale, newScale);
 
 
-func has_reached_target() -> bool:
-	if    targetNodes.size() > 0:
+func _has_reached_target() -> bool:
+	if targetNodes.size() > 0:
 		return radius * 2 + 50 > position.distance_to(currentTarget.position);
 	else:
 		return radius * 2 > position.distance_to(currentTarget.position);
 
 
-func generate_raycasts() -> void:
+func _generate_raycasts() -> void:
 	for child: RayCast2D in raycastContainer.get_children():
 		rays.append(child)
 	for step: int in range(0, (maximumRaycastAngle / 2 + 1), raycastPlacementDensity):
@@ -148,7 +147,7 @@ func generate_raycasts() -> void:
 				frontmost_ray = rc;
 
 
-func getTargetNodes() -> Array[Node2D]:
+func _getTargetNodes() -> Array[Node2D]:
 	if targets == null || targets.size() == 0:
 		return []
 

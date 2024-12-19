@@ -4,8 +4,8 @@ extends Node
 @onready var fpsLabel: Label = $Control/MarginContainer/VBoxContainer/FPS
 @onready var processfcountLabel: Label = $Control/MarginContainer/VBoxContainer/ProcessFrameCount
 @onready var enginetimeLabel: Label = $Control/MarginContainer/VBoxContainer/EngineTime
-
 @onready var readyTimestamp := Time.get_unix_time_from_system() * 1000
+
 
 func _process(_dt: float) -> void:
 	phyfcountLabel.text = "Physics frames count: " + str(Engine.get_physics_frames())
