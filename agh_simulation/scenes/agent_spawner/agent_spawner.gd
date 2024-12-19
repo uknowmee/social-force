@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name AgentSpawner
+
 var agentScene := preload("../agent/agent.tscn")
 
 @export var enabled := true
@@ -17,7 +19,7 @@ var agentScene := preload("../agent/agent.tscn")
 @onready var collisionShape: CollisionShape2D = get_node("CollisionShape2D")
 
 var shape: RectangleShape2D;
-var modulateColor         =  null
+var modulateColor: Color;
 var time_since_last_spawn := 0.0
 
 
@@ -27,7 +29,7 @@ func _ready() -> void:
 		return
 
 	randomize()
-	
+
 	var shape_owners: PackedInt32Array = get_shape_owners()
 	shape = shape_owner_get_shape(shape_owners[0], 0)
 
@@ -37,8 +39,8 @@ func _ready() -> void:
 			spawn_child()
 
 
-func spawn_child():
-	var instance: Node = agentScene.instantiate()
+func spawn_child() -> void:
+	var instance := agentScene.instantiate() as Agent
 	instance.spawner = name
 
 	instance.position = get_random_pos()

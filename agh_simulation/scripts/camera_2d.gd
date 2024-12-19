@@ -10,14 +10,14 @@ var dragging := false
 var drag_start := Vector2.ZERO
 var change := Vector2(0.02, 0.02)
 
-func _ready():
+func _ready() -> void:
 	offset = (get_viewport() as Window).size / 2
 	zoom = Vector2.ONE
 
-func _process(delta):
+func _process(delta: float) -> void:
 	handle_movement(delta)
 
-func handle_movement(_delta):
+func handle_movement(_delta: float) -> void:
 	if dragging:
 		var mouse_position := get_global_mouse_position()
 		var drag_delta := mouse_position - drag_start
@@ -26,17 +26,19 @@ func handle_movement(_delta):
 
 	position = position.lerp(target_position, 0.1)
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			if event.pressed:
+		var mouse_event := event as InputEventMouseButton;
+		
+		if mouse_event.button_index == MOUSE_BUTTON_LEFT:
+			if mouse_event.pressed:
 				dragging = true
 				drag_start = get_global_mouse_position()
 			else:
 				dragging = false
 		
-		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+		if mouse_event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			zoom -= change
 			
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+		if mouse_event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			zoom += change

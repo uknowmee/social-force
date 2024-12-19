@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Agent
+
 @export var randomTargetOffset := false
 @export var radius := 22.023
 @export var targets: Array[NodePath] = []
@@ -15,17 +17,17 @@ extends CharacterBody2D
 @onready var raycastContainer: Node2D = $Raycasts
 @onready var rays: Array[RayCast2D] = []
 
-var frontmost_ray     =  null
-var modulateColor     =  null
+var frontmost_ray: RayCast2D;
+var modulateColor: Variant;
 var reached_target    := false
 var desired_direction := 0.0
 var desired_velocity  := Vector2(0, 0)
 
-@onready var targetNodes: Array[Node] = getTargetNodes();
+@onready var targetNodes: Array[Node2D] = getTargetNodes();
 
-var currentTarget: Node = null
-var spawner             = null
-signal agent_reached_target(agent, currentTarget, time)
+var currentTarget: Node2D = null
+var spawner: StringName = "None"
+signal agent_reached_target(agent: Node, currentTarget: Node, time: int)
 
 
 func _ready() -> void:
@@ -50,7 +52,7 @@ func _ready() -> void:
 	set_motion_mode(MOTION_MODE_FLOATING)
 
 
-func _process(_dt) -> void:
+func _process(_dt: float) -> void:
 	if not currentTarget:
 		push_warning("Agent has no target");
 		set_process(false);
@@ -97,23 +99,23 @@ func get_desired_direction() -> float:
 
 
 # d(alpha)
-func cognitive_heuristic(ray) -> float:
+func cognitive_heuristic(ray: RayCast2D) -> float:
 	var dist_to_collision := raycast_distance_to_collision(ray);
-	var direction_to_target = currentTarget.position.angle_to_point(position);
-	var global_angle = ray.rotation + rotation;
+	var direction_to_target: float = currentTarget.position.angle_to_point(position);
+	var global_angle := ray.rotation + rotation;
 	var penalty: float = 2 * raycastDistance * dist_to_collision * cos(direction_to_target - global_angle)
 	return sqrt(pow(raycastDistance, 2) + pow(dist_to_collision, 2) - penalty);
 
 
 # f(alpha)
-func raycast_distance_to_collision(raycast) -> float:
-	if raycast.is_colliding():
-		return position.distance_to(raycast.get_collision_point());
+func raycast_distance_to_collision(ray: RayCast2D) -> float:
+	if ray.is_colliding():
+		return position.distance_to(ray.get_collision_point());
 	else:
 		return raycastDistance;
 
 
-func set_radius():
+func set_radius() -> void:
 	var shapeNode: CollisionShape2D = get_node("CollisionShape2D");
 	var shape: CircleShape2D = shapeNode.shape;
 	var oldCollisionRadius := shape.radius;
@@ -131,7 +133,7 @@ func has_reached_target() -> bool:
 		return radius * 2 > position.distance_to(currentTarget.position);
 
 
-func generate_raycasts():
+func generate_raycasts() -> void:
 	for child: RayCast2D in raycastContainer.get_children():
 		rays.append(child)
 	for step: int in range(0, (maximumRaycastAngle / 2 + 1), raycastPlacementDensity):
@@ -146,11 +148,11 @@ func generate_raycasts():
 				frontmost_ray = rc;
 
 
-func getTargetNodes() -> Array[Node]:
+func getTargetNodes() -> Array[Node2D]:
 	if targets == null || targets.size() == 0:
 		return []
 
-	var nodes: Array[Node] = []
+	var nodes: Array[Node2D] = []
 	for targetNode in targets:
 		nodes.append(get_node(targetNode))
 	return nodes
