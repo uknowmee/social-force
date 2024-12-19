@@ -1,3 +1,3 @@
 extends Node
 
-@export var scaleCoefficient = 1.0;
+@export var scaleCoefficient := 1.0;

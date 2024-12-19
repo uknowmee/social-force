@@ -11,16 +11,16 @@ var drag_start := Vector2.ZERO
 var change := Vector2(0.02, 0.02)
 
 func _ready():
-	offset = get_viewport().size / 2
+	offset = (get_viewport() as Window).size / 2
 	zoom = Vector2.ONE
 
 func _process(delta):
 	handle_movement(delta)
 
-func handle_movement(delta):
+func handle_movement(_delta):
 	if dragging:
-		var mouse_position = get_global_mouse_position()
-		var drag_delta = mouse_position - drag_start
+		var mouse_position := get_global_mouse_position()
+		var drag_delta := mouse_position - drag_start
 		target_position -= drag_delta
 		drag_start = mouse_position
 
