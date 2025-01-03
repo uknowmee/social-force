@@ -16,6 +16,9 @@ class_name AgentPathRaycast
 @onready var raycastContainer: Node2D = $Raycasts
 @onready var rays: Array[RayCast2D] = []
 
+@onready var nav : NavigationAgent2D = $NavigationAgent2D
+var finished := false
+
 var frontmost_ray: RayCast2D
 var modulateColor: Variant
 var reached_target := false
@@ -24,7 +27,7 @@ var desired_velocity := Vector2(0, 0)
 
 @onready var targetNodes: Array[Node2D] = _getTargetNodes()
 
-var currentTarget: Node2D = null
+var currentTarget: Vector2 = Vector2(0, 0)
 #var spawner: StringName = "None"
 #signal agent_reached_target(agent: Node, currentTarget: Node, time: int)
 
@@ -44,41 +47,51 @@ func _ready() -> void:
 
 	_generate_raycasts()
 
-	currentTarget = targetNodes.pop_front()
+	var globalTarget : Node2D = targetNodes.pop_front()
+	nav.target_position = globalTarget.position
+	currentTarget = nav.get_next_path_position()
+	
 	if currentTarget != null:
-		look_at(currentTarget.position)
+		look_at(currentTarget)
 
 	set_motion_mode(MOTION_MODE_FLOATING)
 
 
-func _process(_dt: float) -> void:
-	if not currentTarget:
-		push_warning("Agent has no target")
-		set_process(false)
-		return
-
-	desired_direction = _get_desired_direction()
-	rotation = lerp(rotation, desired_direction, rotationSpeed)
-	desired_velocity = Vector2(_get_desired_speed(), 0).rotated(rotation)
-
-	if _has_reached_target():
-		#emit_signal(
-			#"agent_reached_target",
-			#spawner,
-			#name,
-			#currentTarget,
-			#targetNodes.size() == 0,
-			#Time.get_ticks_msec()
-		#)
-		if targetNodes.size() != 0:
-			currentTarget = targetNodes.pop_front()
-		else:
-			queue_free()
+#func _process(_dt: float) -> void:
+	#if not currentTarget:
+		#push_warning("Agent has no target")
+		#set_process(false)
+		#return
+#
+	#desired_direction = _get_desired_direction()
+	#rotation = lerp(rotation, desired_direction, rotationSpeed)
+	#desired_velocity = Vector2(_get_desired_speed(), 0).rotated(rotation)
+#
+	#if _has_reached_target():
+		##emit_signal(
+			##"agent_reached_target",
+			##spawner,
+			##name,
+			##currentTarget,
+			##targetNodes.size() == 0,
+			##Time.get_ticks_msec()
+		##)
+		#if targetNodes.size() != 0:
+			#currentTarget = targetNodes.pop_front()
+		#else:
+			#queue_free()
 
 
 func _physics_process(_delta: float) -> void:
-	velocity = lerp(velocity, desired_velocity, 0.2)
-	move_and_slide()
+	if not finished:
+		currentTarget = nav.get_next_path_position()
+		
+		desired_direction = _get_desired_direction()
+		rotation = lerp(rotation, desired_direction, rotationSpeed)
+		desired_velocity = Vector2(_get_desired_speed(), 0).rotated(rotation)
+		
+		velocity = lerp(velocity, desired_velocity, 0.2)
+		move_and_slide()
 
 
 func _get_desired_speed() -> float:
@@ -100,7 +113,7 @@ func _get_desired_direction() -> float:
 # d(alpha)
 func _cognitive_heuristic(ray: RayCast2D) -> float:
 	var dist_to_collision := _raycast_distance_to_collision(ray)
-	var direction_to_target: float = currentTarget.position.angle_to_point(position)
+	var direction_to_target: float = currentTarget.angle_to_point(position)
 	var global_angle := ray.rotation + rotation
 	var penalty: float = 2 * raycastDistance * dist_to_collision * cos(direction_to_target - global_angle)
 	return sqrt(pow(raycastDistance, 2) + pow(dist_to_collision, 2) - penalty)
@@ -127,9 +140,9 @@ func _set_radius() -> void:
 
 func _has_reached_target() -> bool:
 	if targetNodes.size() > 0:
-		return radius * 2 + 50 > position.distance_to(currentTarget.position)
+		return radius * 2 + 50 > position.distance_to(currentTarget)
 	else:
-		return radius * 2 > position.distance_to(currentTarget.position)
+		return radius * 2 > position.distance_to(currentTarget)
 
 
 func _generate_raycasts() -> void:
@@ -155,3 +168,7 @@ func _getTargetNodes() -> Array[Node2D]:
 	for targetNode in targets:
 		nodes.append(get_node(targetNode))
 	return nodes
+
+
+func _on_navigation_agent_2d_navigation_finished() -> void:
+	finished = true
