@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://b55rykw31hnqk"]
+
+[ext_resource type="Script" path="res://scenes/agent/agent.gd" id="1_bgct1"]
+[ext_resource type="Texture2D" uid="uid://c7lw3otldlpf" path="res://assets/agent.png" id="2_gr67j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5dsh1"]
+radius = 26.0
+
+[node name="Agent" type="CharacterBody2D"]
+script = ExtResource("1_bgct1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5.80549e-05, 0.125002)
+scale = Vector2(0.40625, 0.404297)
+texture = ExtResource("2_gr67j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5dsh1")
+one_way_collision_margin = 0.7
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 26, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Raycasts" type="Node2D" parent="."]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
