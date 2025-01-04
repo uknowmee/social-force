@@ -28,8 +28,8 @@ var desired_velocity := Vector2(0, 0)
 @onready var targetNodes: Array[Node2D] = _getTargetNodes()
 
 var currentTarget: Vector2 = Vector2(0, 0)
-#var spawner: StringName = "None"
-#signal agent_reached_target(agent: Node, currentTarget: Node, time: int)
+var spawner: StringName = "None"
+signal agent_reached_target(agent: Node, currentTarget: Node, time: int)
 
 
 func _ready() -> void:
@@ -172,3 +172,11 @@ func _getTargetNodes() -> Array[Node2D]:
 
 func _on_navigation_agent_2d_navigation_finished() -> void:
 	finished = true
+	emit_signal(
+		"agent_reached_target",
+		spawner,
+		name,
+		currentTarget,
+		targetNodes.size() == 0,
+		Time.get_ticks_msec()
+	)
