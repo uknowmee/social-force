@@ -26,5 +26,3 @@ default_color = Color(0, 0, 0, 1)
 [node name="Raycasts" type="Node2D" parent="."]
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-
-[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
