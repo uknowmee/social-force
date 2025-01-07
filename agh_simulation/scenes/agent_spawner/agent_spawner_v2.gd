@@ -1,12 +1,12 @@
 extends Area2D
-class_name AgentSpawnerPathRaycast
+class_name AgentSpawnerV2
 
-var agentScene := preload("../agent_with_path_raycast/agent_path_raycast.tscn")
+var agentScene := preload("../agent/agent_v2.tscn")
 
 @export var enabled := true
 @export var amount := 8
 @export var targets: Array[NodePath] = []
-@export var spawn_per_second := 0
+@export var spawn_per_second := 0.0
 @export var randomize_raycast_angle := 30
 @export var ranzomize_radius := 2.5
 @export var randomize_raycast_distance := 20
@@ -39,7 +39,7 @@ func _ready() -> void:
 
 
 func _spawn_child() -> void:
-	var instance := agentScene.instantiate() as AgentPathRaycast
+	var instance := agentScene.instantiate() as AgentV2
 	instance.spawner = name
 
 	instance.position = _get_random_pos()

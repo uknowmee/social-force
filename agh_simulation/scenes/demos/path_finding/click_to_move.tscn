@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1p0l71ihusvk" path="res://assets/TX Tileset Grass.png" id="1_gefxv"]
 [ext_resource type="Texture2D" uid="uid://c7lw3otldlpf" path="res://assets/agent.png" id="2_jkyuj"]
-[ext_resource type="Script" path="res://scenes/agent_with_path/agent_path.gd" id="2_woy2f"]
+[ext_resource type="Script" path="res://scenes/demos/path_finding/scripts/path_finding.gd" id="2_woy2f"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ewgoo"]
 vertices = PackedVector2Array(629, -87.9766, 629, 227.008, 586, 106, 586, 38, 518, 38, 518, 70, 442, 70, 442, -74, 246, 74, 294, 74, 294, 150, 234, 150, 234, 86, 42, 86, 42, 74, 186, 74, 118, -74, 118, 38, -26, 38, -69.0234, -87.0078, -26, 122, 166, 122, 166, 186, -69.9688, 227.977, 362, 38, 314, 38, 314, -38, 374, -38, 374, 154, 362, 186, 490, 154, 490, 106, 186, -74, 246, -74)

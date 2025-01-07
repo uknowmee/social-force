@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name AgentPathRaycast
+class_name AgentV2
 
 @export var randomTargetOffset := false
 @export var radius := 22.023

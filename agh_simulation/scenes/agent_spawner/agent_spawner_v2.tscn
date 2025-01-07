@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c47fm45tavgab"]
 
-[ext_resource type="Script" path="res://scenes/agent_spawner/agent_spawner.gd" id="1_nia1f"]
+[ext_resource type="Script" path="res://scenes/agent_spawner/agent_spawner_v2.gd" id="1_nia1f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqsjx"]
 size = Vector2(64, 384)
