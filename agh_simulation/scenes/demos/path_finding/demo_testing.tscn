@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bredly570fjym" path="res://assets/agh.png" id="6_iowt4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_k5g32"]
-vertices = PackedVector2Array(285.688, 31537.1, 286.031, 31449.9, 26830, 30878.3, 62400.9, 3123.5, 62390.8, 3793.07, 51986.4, 2439.29, 6586.73, -543.297, 389.422, 3760.55, 407.008, -949.289, 64133.3, 3237.31, 64110.8, 3544.06, 64072.4, 3233.31, 18822.1, 1601.7, 15806.7, 1408.02, 46668.1, 2473.97, 30775.9, 2368.23, 18642.2, 18397.1, 20774.4, 18445, 18957.6, 18445, 59441.4, 26087.4, 62047.6, 26347.3, 33108.4, 29971, 34178.2, 28639.1, 44541.8, 27451.8, 47268.6, 27195.2, 54347.1, 5734.62, 41724.6, 5345.87, 41821.5, 3289.37, 60857.9, 4185.46, 62358.1, 5935.88, 17430.3, 1642.31, 52764.5, 15183.1, 46831.7, 14142.8, 52835.2, 13877, 53422.7, 13945, 53517.6, 15095.3, 20092.3, 4504.36, 22692.3, 3597.13, 29022.2, 2326.77, 28981.8, 4605, 20735.1, 6184.13, 12241.4, 22752.7, 23217.2, 19543.9, 34031.7, 17340.3, 35180.6, 25458.1, 33744.4, 25602.1, 30523.9, 25580.1, 29076.4, 25560.9, 8893.03, 10947.9, 13095.1, 9993.53, 13942.2, 10034.5, 11353.8, 13530.9, 5124.83, 13603.1, 21119.4, 3576.86, 14277.2, 27935, 19218.1, 27914.9, 18801.7, 28113.8, 34010, 4818.5, 34057, 16230, 31198.2, 10075.2, 31116.8, 6042.87, 33074.7, 4770.49, 33123.3, 2976.64, 30796.1, 4605, 44325.1, 25025.2, 42546.3, 25167.9, 43140.5, 24572.6, 30562.1, 28261.8, 34033.1, 27372.3, 29607.6, 29367, 21104, 28311.6, 21199.8, 29424.1, 20591, 29233.5, 20591, 27730.4, 21008.6, 25484.4, 19728.1, 25629.8, 15958.5, 17171.3, 15937.5, 16689.5, 16219.1, 16750.2, 56900.8, 22849.6, 56087.4, 23143.3, 55298.1, 16739.5, 58197.4, 16312.4, 8878.99, 6188.83, 13054.9, 6104.15, 19990.7, 7710.87, 20715.1, 8301.34, 17227.1, 8421.68, 18317.8, 7567.16, 17025.2, 6042.86, 18378.2, 4443.65, 8596.43, 5563.96, 4773.77, 5192.81, 12383.7, 2016.67, 17552.7, 3476.31, 20655.9, 17151.1, 20615, 16668.3, 20957.4, 16708.3, 55209.2, 15235.4, 54893.2, 13719.5, 56091.7, 13674.6, 57831.7, 14391.5, 62057.6, 25692.6, 55316.9, 15904.6, 55180.8, 15236.9, 22651.8, 1924.8, 21090.5, 18540.8, 21139.5, 19592.2, 20847.7, 19568.1, 18617.8, 19447.9, 18884.3, 19543.9, 57425.6, 25857.6, 55907.2, 12567.3, 54957, 12748.1, 52021.4, 8312, 46494.1, 9952.04, 41656.5, 8312, 41896.3, 10409, 58080.8, 15454.9, 30391.3, 16546.6, 30210.3, 10055.2, 47559.8, 15952.4, 48600.7, 23668.1, 46767.6, 23849.1, 42232.9, 14697.2, 52809.6, 16043.8, 50113.1, 16560.3, 49955.2, 15633.8, 8633.09, 28937, 8613.1, 26963.1, 11012.6, 26982.9, 11133.6, 28858.4, 16279.3, 15980.8, 18639, 15941.2, 18639, 16418.5, 18859.5, 29329.5, 291.828, 29895.7, 295.047, 29030.9, 489.352, 28997.4, 7082.07, 29100, 8046, 18205, 7422, 18205, 7422, 17745.8, 11426.2, 17649.8, 20937.3, 16081.6, 23300.3, 16002.2, 23884.2, 17030, 408.398, 27042.6, 2707.36, 26942.4, 2989.33, 28938.1, 4561.1, 28917.9, 4541.1, 26982.7, 6859.99, 26922.2, 36162.9, 16230, 36330.8, 5417.87, 41542.5, 6256.42, 19707.1, 27692.8, 7102.75, 25048.1, 6920.99, 25973.9, 5851, 25835.2, 5851, 25127.9, 22474.5, 25561.5, 29000.4, 27254.3, 23247, 27443.9, 22569.6, 27143.3, 12806.6, 28796.6, 11013.5, 25914.9, 8591.12, 25894.1, 8511.11, 25027.9, 11154.4, 25048.4, 62238.3, 13816.5, 42097.7, 16368.9, 12144.4, 21057.9, 8046, 20430.6, 14330.1, 18372.9, 14426.8, 19496.1, 29884.8, 16988.9, 30005.6, 16526.4, 28517, 17010.2, 25389.3, 17030, 25570.3, 16465, 28201.9, 16465, 28517, 16602.5, 5197.12, 17935.2, 6035.92, 18222.1, 6011.89, 20503.4, 5340.33, 21106.1, 3012.33, 25127.9, 2649.39, 26014.7, 525.867, 25935.3, 308.648, 25391.4, 378.133, 6783.87, 4429.99, 25149, 5508.58, 23690.2, 14083.1, 16481.5, 14525.7, 16683.3, 14505.5, 17130.7, 23222.6, 19533.2, 22544.3, 18565.1, 11261.3, 23786.5, 11187.3, 23539.8, 11804.6, 22922.6, 14231.8, 25721.2, 12563.4, 24986.6, 29875, 28433.3, 19208.1, 17130.9, 21221.6, 1802.16, 18800.9, 3435.68, 6793.98, 10966.1, 6806.02, 5576.07, 4544.55, 9778.18, 2930.12, 9922.84, 7987.75, 23907, 2514.24, 6113.59)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18), PackedInt32Array(19, 20, 21, 22, 23, 24), PackedInt32Array(25, 26, 27, 14, 28, 29), PackedInt32Array(13, 12, 30), PackedInt32Array(31, 32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39, 40), PackedInt32Array(41, 42, 43, 44, 45, 46, 47), PackedInt32Array(48, 49, 50, 51, 52), PackedInt32Array(53, 37, 36), PackedInt32Array(54, 55, 56), PackedInt32Array(57, 58, 59, 60, 61), PackedInt32Array(62, 61, 60, 63, 15), PackedInt32Array(64, 65, 66), PackedInt32Array(67, 68, 22, 21, 69), PackedInt32Array(70, 71, 72, 73), PackedInt32Array(74, 70, 73, 75), PackedInt32Array(76, 77, 78), PackedInt32Array(79, 80, 81, 82), PackedInt32Array(49, 48, 83, 84), PackedInt32Array(68, 67, 46, 45), PackedInt32Array(63, 60, 40, 39), PackedInt32Array(85, 36, 40, 86), PackedInt32Array(85, 86, 87, 88), PackedInt32Array(88, 87, 89, 90), PackedInt32Array(90, 89, 91, 92, 93, 94), PackedInt32Array(95, 96, 97), PackedInt32Array(98, 99, 100, 101), PackedInt32Array(19, 102, 20), PackedInt32Array(103, 104, 98), PackedInt32Array(38, 37, 105), PackedInt32Array(106, 107, 108, 17), PackedInt32Array(109, 16, 18, 110), PackedInt32Array(79, 82, 19, 111), PackedInt32Array(112, 113, 25, 29), PackedInt32Array(114, 33, 32, 115), PackedInt32Array(116, 114, 115, 117), PackedInt32Array(101, 118, 103, 98), PackedInt32Array(119, 120, 59, 58), PackedInt32Array(121, 122, 123, 124, 32), PackedInt32Array(125, 126, 127, 31), PackedInt32Array(128, 129, 130, 131), PackedInt32Array(132, 133, 134, 78), PackedInt32Array(135, 71, 21, 136, 137, 138, 139), PackedInt32Array(140, 141, 142, 143), PackedInt32Array(97, 144, 145, 146), PackedInt32Array(138, 147, 148, 149), PackedInt32Array(150, 151, 152, 139), PackedInt32Array(153, 154, 26, 155), PackedInt32Array(73, 156, 75), PackedInt32Array(32, 31, 127, 121), PackedInt32Array(157, 158, 159, 160), PackedInt32Array(161, 47, 162, 163, 164), PackedInt32Array(54, 56, 135, 165), PackedInt32Array(166, 167, 168, 169), PackedInt32Array(29, 170, 101, 100, 112), PackedInt32Array(26, 25, 155), PackedInt32Array(153, 155, 116), PackedInt32Array(153, 116, 117, 124, 171), PackedInt32Array(172, 173, 140, 143, 174, 175), PackedInt32Array(176, 177, 119), PackedInt32Array(13, 30, 94, 93), PackedInt32Array(178, 179, 180, 181, 182), PackedInt32Array(183, 184, 185, 186), PackedInt32Array(187, 188, 189, 190, 191), PackedInt32Array(160, 192, 187, 191, 193), PackedInt32Array(194, 195, 196, 143), PackedInt32Array(84, 83, 91), PackedInt32Array(43, 197, 198), PackedInt32Array(176, 43, 198, 17, 143, 178), PackedInt32Array(41, 47, 161, 74), PackedInt32Array(199, 200, 201, 41, 74, 75, 202, 203), PackedInt32Array(95, 97, 146), PackedInt32Array(64, 66, 171, 124), PackedInt32Array(69, 204, 67), PackedInt32Array(78, 134, 205, 76), PackedInt32Array(42, 197, 43), PackedInt32Array(107, 42, 41), PackedInt32Array(108, 107, 41, 110), PackedInt32Array(175, 109, 110, 41, 172), PackedInt32Array(206, 53, 36, 90, 207), PackedInt32Array(43, 176, 119, 58, 153, 171), PackedInt32Array(135, 72, 71), PackedInt32Array(124, 123, 24, 64), PackedInt32Array(198, 106, 17), PackedInt32Array(143, 17, 16), PackedInt32Array(143, 16, 174), PackedInt32Array(173, 172, 186, 185), PackedInt32Array(24, 111, 19), PackedInt32Array(24, 23, 64), PackedInt32Array(179, 178, 143), PackedInt32Array(146, 179, 143, 95), PackedInt32Array(205, 95, 143, 76), PackedInt32Array(196, 76, 143), PackedInt32Array(194, 143, 51, 50), PackedInt32Array(208, 48, 52), PackedInt32Array(209, 208, 52, 210, 92), PackedInt32Array(27, 62, 15, 14), PackedInt32Array(12, 15, 38, 206), PackedInt32Array(71, 69, 21), PackedInt32Array(89, 84, 91), PackedInt32Array(92, 91, 209), PackedInt32Array(211, 210, 52, 183), PackedInt32Array(211, 183, 186), PackedInt32Array(211, 186, 193, 191), PackedInt32Array(149, 150, 139, 138), PackedInt32Array(139, 128, 131, 135), PackedInt32Array(135, 131, 165), PackedInt32Array(54, 165, 203, 202), PackedInt32Array(212, 199, 203, 169, 168), PackedInt32Array(212, 168, 157, 193), PackedInt32Array(193, 157, 160), PackedInt32Array(213, 211, 191), PackedInt32Array(213, 191, 93, 92), PackedInt32Array(90, 94, 207), PackedInt32Array(206, 207, 12), PackedInt32Array(206, 38, 105)])
+vertices = PackedVector2Array(285.688, 31537.1, 286.031, 31449.9, 26830, 30878.3, 30464.4, 25579.3, 30072.9, 25574.1, 30464.2, 25571.1, 22575.9, 21733.4, 22607.9, 23548.5, 22595.9, 23549.3, 22570.1, 21733.2, 62400.9, 3123.5, 62390.8, 3793.07, 51986.4, 2439.29, 6586.73, -543.297, 389.422, 3760.55, 407.008, -949.289, 64133.3, 3237.31, 64110.8, 3544.06, 64072.4, 3233.31, 18822.1, 1601.7, 15806.7, 1408.02, 46668.1, 2473.97, 30775.9, 2368.23, 26580.8, 19726.9, 25485.2, 19751.1, 23368.8, 19740.2, 25493.9, 19556, 26717.8, 19548, 23974.3, 19403.8, 24530.2, 19364.2, 25286, 19348.1, 12898.1, 16880.7, 13156.1, 16860, 13528.1, 16860, 14505.5, 17130.7, 59441.4, 26087.4, 62047.6, 26347.3, 33108.4, 29971, 34178.2, 28639.1, 44541.8, 27451.8, 47268.6, 27195.2, 12711.9, 3638.63, 12756.1, 4104.46, 12573.2, 3992.18, 12438.5, 3880.56, 12493.9, 3772.83, 11740.6, 5546.72, 12717.4, 5617.85, 11090, 5955.27, 10807.8, 5875.62, 11201, 5650.18, 54347.1, 5734.62, 41724.6, 5345.87, 41821.5, 3289.37, 60857.9, 4185.46, 62358.1, 5935.88, 17430.3, 1642.31, 28867, 22828.2, 28850.3, 22390.6, 28861.5, 22464.6, 35180.6, 25458.1, 33744.4, 25602.1, 32213, 25388.2, 31926.7, 24929.3, 12950.9, 1915.8, 13047.2, 6070.9, 12736.9, 5344.2, 13294.9, 6100.44, 13054.9, 6104.15, 52764.5, 15183.1, 46831.7, 14142.8, 52835.2, 13877, 53422.7, 13945, 53517.6, 15095.3, 20092.3, 4504.36, 22692.3, 3597.13, 29022.2, 2326.77, 28981.8, 4605, 20735.1, 6184.13, 12889.2, 8770.45, 13095.1, 9993.53, 12863, 9771.35, 12803.5, 6425.43, 11199.3, 6449.55, 10836.1, 6896.09, 10158.1, 6576.08, 10388.1, 6481.49, 12875.6, 11519.6, 13091.9, 10364, 30887.8, 23939.1, 31698.6, 23627, 32225.1, 23634.1, 30957.5, 24261.9, 30882.6, 23950.9, 12850.7, 11134.5, 31005.7, 24564.8, 21119.4, 3576.86, 12383.7, 2016.67, 12732.1, 2043.29, 12323.5, 2071.15, 11594, 2330.25, 11785.6, 2316.31, 19915.2, 23362.8, 19940.1, 22591.9, 20478.8, 19735.2, 20550.2, 23956.2, 19890.9, 24683.9, 19929, 20223.8, 14277.2, 27935, 19218.1, 27914.9, 18801.7, 28113.8, 23247, 27443.9, 23220.5, 27432.2, 26710.2, 27310.6, 29000.4, 27254.3, 14083.1, 16481.5, 14525.7, 16683.3, 12863, 9144.68, 11190.8, 5039.31, 10782, 4815.16, 10954.8, 4777.72, 11338.1, 4712.09, 11492.8, 4835.42, 11614, 5028.15, 10100.6, 8807.13, 10130.2, 7808.44, 10138.8, 7562.15, 10817, 9132.85, 10149.2, 9063.2, 12747.5, 6170.27, 44325.1, 25025.2, 42546.3, 25167.9, 43140.5, 24572.6, 27951.3, 19998.9, 27648.9, 20467.3, 27603.6, 20089, 27852.1, 19283.9, 28185.1, 19577.1, 27261.6, 20666.2, 27473.6, 21029.8, 27115.6, 20769.3, 27110.5, 20758.3, 18246.8, 28861.9, 18859.5, 29329.5, 18222.3, 29198, 19922.7, 19999, 19332.6, 19999, 12085.9, 19796.8, 11987.4, 19453, 14350, 19513.1, 34031.7, 17340.3, 32160.9, 18396.2, 12803, 10482.6, 12803, 10040, 12234.8, 10529.7, 12352.5, 10307, 25265.8, 20021, 24904.1, 20044.9, 23893.7, 19903.2, 17209.9, 28726, 13452.9, 10397.9, 13942.2, 10034.5, 30602.1, 23082, 30952, 23074.1, 30591.2, 23087.7, 11407, 5444.14, 11407, 5217.28, 21104, 28311.6, 21199.8, 29424.1, 20591, 29233.5, 20591, 27730.4, 20994.8, 25536.7, 21010.4, 25537.2, 19728.1, 25629.8, 12851.6, 9139.26, 12150.8, 9403.76, 12324.4, 9568.2, 11988.8, 9769.92, 9817.36, 7823.1, 9948.17, 8085.7, 9966.77, 8336.3, 9750.04, 8178.47, 9670.79, 7989.71, 9555.37, 7668.15, 4773.77, 5192.81, 5291.57, 4986.91, 5396.02, 6762.71, 4544.55, 9778.18, 5881.82, 12549.2, 21365, 22829.3, 21365, 24078, 20969.3, 23947.8, 21264.4, 22494.1, 21279.2, 22497.4, 12489.1, 9796.35, 12327.1, 9989.79, 18215.3, 20194.6, 17732.8, 20189.1, 17783.1, 20013.5, 18215, 19999, 15958.5, 17171.3, 15937.5, 16689.5, 16219.1, 16750.2, 28401.1, 19244.8, 28360.7, 17889.8, 29976.9, 18786.1, 29338.3, 19568.2, 28787.7, 19543.8, 9562.22, 7652.03, 9377.7, 7409.94, 9340.13, 7739.2, 56900.8, 22849.6, 56087.4, 23143.3, 55298.1, 16739.5, 58197.4, 16312.4, 9012.47, 8384.89, 8875.02, 8412.76, 8875.7, 8036.12, 9023.54, 8045.43, 9224.93, 8217.63, 20655.9, 17151.1, 20615, 16668.3, 20957.4, 16708.3, 26758.8, 20649.9, 26531.2, 20734.1, 55209.2, 15235.4, 54893.2, 13719.5, 56091.7, 13674.6, 57831.7, 14391.5, 62057.6, 25692.6, 11690.3, 3364.9, 11414.2, 3236.28, 11560, 3489.93, 11351.6, 3396.8, 12028.1, 3596.68, 10533, 3207.03, 10806.6, 3357.87, 9853.51, 3510.35, 10184.1, 3292.29, 10376.4, 3515.33, 9644.37, 3652.44, 11598.6, 9755.74, 11573.5, 9980.87, 11199, 9772, 11199, 9587.15, 11424.8, 9471.34, 9631.18, 8405.77, 9800.04, 8586.88, 9363.94, 8416.21, 9416.11, 8653.57, 9189.26, 8640.26, 55316.9, 15904.6, 55180.8, 15236.9, 22651.8, 1924.8, 12065.6, 3494.05, 32179.9, 28260.1, 34033.1, 27372.3, 14277, 22527.9, 14270.9, 23065.8, 12241.4, 22752.7, 12144.4, 21057.9, 14300.1, 19963.1, 57425.6, 25857.6, 15603.7, 20155, 15189.4, 20153.4, 15211.2, 19955.9, 15617.7, 19955.8, 55907.2, 12567.3, 54957, 12748.1, 22850, 24086.1, 22850, 23904.9, 23356.1, 23956.1, 23388.3, 24192.2, 52021.4, 8312, 46494.1, 9952.04, 41656.5, 8312, 41896.3, 10409, 29889.5, 22844.1, 30083.1, 22725.3, 28501, 21479.6, 28501.5, 21484.5, 27489.9, 21498.8, 27684.5, 21199.6, 58080.8, 15454.9, 24324.3, 21094.2, 24284.3, 21245.9, 23335.7, 21238, 23366.8, 20823.7, 23918.3, 20697.9, 12823.9, 11793.7, 10736.2, 11592.3, 11501.6, 11837.3, 29052.2, 25582.1, 29075.5, 25581.9, 28497.9, 21150, 23959.1, 17963.1, 24359.7, 17961.2, 23957.7, 18807.9, 23951.9, 18495.1, 30391.3, 16546.6, 30210.3, 10055.2, 31198.2, 10075.2, 20847.4, 19567.9, 20804.4, 18474.5, 21100, 18476.5, 21157.5, 19547.9, 21132.5, 19702.9, 33123.3, 2976.64, 33074.7, 4770.49, 30796.1, 4605, 19339.8, 20207.4, 19025.6, 20205.1, 19017.6, 19999, 17222.3, 19992, 9472.28, 7890.46, 9129.28, 7786.61, 9293.58, 8009.59, 18425.3, 22601.9, 18436.3, 22986, 17157.4, 22986, 16164.8, 23425, 16591.6, 23029, 15563.4, 23073, 14458.8, 23436.1, 14918.6, 23094.4, 18620, 17983.9, 19069.6, 17948, 19090.9, 18466.2, 18940.5, 18468.1, 18618, 19447.9, 18991.5, 19584.1, 12001.3, 10018.2, 14718, 22518, 14939.6, 22518, 14718, 23073.2, 47559.8, 15952.4, 48600.7, 23668.1, 46767.6, 23849.1, 42232.9, 14697.2, 7953.24, 12510.8, 7915.24, 10943, 8872.67, 10947.9, 8826.69, 12368.5, 28911.3, 23986.6, 28910.8, 23974.7, 30562.1, 28261.8, 30561.8, 28238.4, 52809.6, 16043.8, 50113.1, 16560.3, 49955.2, 15633.8, 11140, 4706.26, 8633.09, 28937, 8613.1, 26963.1, 11012.6, 26982.9, 11133.6, 28858.4, 16279.3, 15980.8, 18639, 15941.2, 18639, 16418.5, 26665.2, 25412.9, 27964.5, 25400.9, 29040.8, 24918.2, 27941.6, 24883.9, 30558.9, 18199.2, 30938, 18373.8, 24376.1, 20677.5, 24435.2, 20914.1, 23401.4, 19894.9, 22689.2, 20306, 23005.5, 20234.3, 22274.1, 20848.9, 22697.3, 20695.5, 22274.1, 20848.9, 23062.8, 18816.1, 22534.7, 18485.8, 291.828, 29895.7, 295.047, 29030.9, 489.352, 28997.4, 7082.07, 29100, 8046, 18205, 7422, 18205, 7422, 17745.8, 11426.2, 17649.8, 20937.3, 16081.6, 23300.3, 16002.2, 23884.2, 17030, 408.398, 27042.6, 2707.36, 26942.4, 2989.33, 28938.1, 17025.2, 6042.86, 13569.3, 6096.2, 13450.8, 1826.94, 17552.7, 3476.31, 4561.1, 28917.9, 4541.1, 26982.7, 6859.99, 26922.2, 9446.71, 8890.12, 9170.78, 8862.04, 9415.9, 8670.18, 36162.9, 16230, 36330.8, 5417.87, 41542.5, 6256.42, 29831, 22399.4, 29823, 20052.8, 28489.9, 19784.3, 27021.9, 20890, 19707.1, 27692.8, 20722.6, 24723.2, 20948.2, 24963.1, 14231.8, 25721.2, 17948, 25149.1, 10081.8, 12435.5, 10807.4, 9435.17, 10711.8, 10062.6, 34010, 4818.5, 34057, 16230, 7102.75, 25048.1, 6920.99, 25973.9, 5851, 25835.2, 5851, 25127.9, 23057.3, 18827, 23240.7, 19569.6, 23487, 19412.1, 23364.1, 19727.1, 11013.5, 25914.9, 8591.12, 25894.1, 8511.11, 25027.9, 11154.4, 25048.4, 11850.1, 9617.44, 11721.5, 9318.49, 10926.5, 5088.66, 10523, 5073.15, 10788, 5207.4, 10523, 5332.1, 10788, 5443.84, 10512.1, 5337.68, 62238.3, 13816.5, 42097.7, 16368.9, 22703.1, 20706, 22641.2, 20841.1, 22468.8, 20988, 31116.8, 6042.87, 8046, 20430.6, 11626.8, 19272.7, 11274.8, 19461.6, 9853.5, 3510.34, 22247.6, 21268.5, 21890.5, 21371.4, 21950.2, 21819.2, 11775, 10169.7, 11908.8, 10553.8, 11540.8, 10387.2, 11072.2, 10075.1, 10820.4, 9772, 29884.8, 16988.9, 30005.6, 16526.4, 27597.6, 20078.9, 26941.7, 19268.1, 26988.7, 20094.9, 23234.9, 19580.1, 18800.9, 3435.68, 18378.2, 4443.65, 11524.4, 12453.6, 12325.8, 12485.7, 12452, 13085.1, 12505.1, 16892.3, 30546.5, 18194.2, 28517, 17010.2, 25389.3, 17030, 25570.3, 16465, 28201.9, 16465, 28517, 16602.5, 5197.12, 17935.2, 6035.92, 18222.1, 6011.89, 20503.4, 5340.33, 21106.1, 8299.51, 4815.23, 9117.85, 5793.89, 7089.59, 4393.95, 3012.33, 25127.9, 2649.39, 26014.7, 525.867, 25935.3, 308.648, 25391.4, 378.133, 6783.87, 4429.99, 25149, 5508.58, 23690.2, 2930.12, 9922.84, 5124.83, 13603.1, 10964.4, 5639.81, 8702.52, 4362.62, 20847.7, 19727.8, 11261.3, 23786.5, 11187.3, 23539.8, 11804.6, 22922.6, 14491, 24812.9, 14611.2, 25130.2, 29607.6, 29367, 29875, 28433.3, 19208.1, 17130.9, 31130.2, 24884, 15066.8, 18034.1, 14789, 18424.8, 14350, 18410.7, 20734.4, 24421.1, 21221.6, 1802.16, 17435.9, 28873, 14788.6, 28760.2, 11353.8, 13530.9, 9607.26, 3119.14, 9148.39, 3607.36, 7846.12, 4056.9, 9031.46, 4280.05, 11856.1, 20133.2, 14848.2, 29210, 12806.6, 28796.6, 7987.75, 23907, 10222.5, 3601.92, 9082.67, 3985.86, 8114.66, 4435.58, 28582.4, 24074, 20774, 17948, 16164.9, 25077, 2514.24, 6113.59, 12563.4, 24986.6, 11225.5, 19830.1, 11470.2, 20116.8, 19990.7, 7710.87, 20715.1, 8301.34, 17227.1, 8421.68, 18317.8, 7567.16)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(10, 11, 12), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 17, 18), PackedInt32Array(19, 20, 21, 22), PackedInt32Array(23, 24, 25, 26, 27), PackedInt32Array(25, 28, 29, 30, 26), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(35, 36, 37, 38, 39, 40), PackedInt32Array(41, 42, 43, 44, 45), PackedInt32Array(46, 47, 48, 49, 50), PackedInt32Array(51, 52, 53, 21, 54, 55), PackedInt32Array(20, 19, 56), PackedInt32Array(57, 58, 59), PackedInt32Array(60, 61, 62, 63), PackedInt32Array(42, 64, 65, 66), PackedInt32Array(65, 67, 68), PackedInt32Array(69, 70, 71, 72, 73), PackedInt32Array(74, 75, 76, 77, 78), PackedInt32Array(79, 68, 80, 81), PackedInt32Array(68, 79, 82), PackedInt32Array(83, 82, 84, 85, 86), PackedInt32Array(87, 88, 32), PackedInt32Array(89, 90, 91, 92, 93), PackedInt32Array(88, 87, 94), PackedInt32Array(91, 60, 63, 95, 92), PackedInt32Array(96, 75, 74), PackedInt32Array(97, 64, 98, 99), PackedInt32Array(100, 97, 99, 101), PackedInt32Array(102, 103, 104, 105, 106), PackedInt32Array(104, 103, 107), PackedInt32Array(108, 109, 110), PackedInt32Array(111, 112, 113, 114), PackedInt32Array(33, 115, 116, 34), PackedInt32Array(79, 81, 117), PackedInt32Array(118, 119, 120, 121, 122, 123), PackedInt32Array(124, 125, 126, 84, 127, 128), PackedInt32Array(65, 68, 82, 129, 47, 66), PackedInt32Array(130, 131, 132), PackedInt32Array(133, 134, 135, 136, 137), PackedInt32Array(138, 135, 134), PackedInt32Array(138, 134, 139, 140, 141), PackedInt32Array(142, 110, 143, 144), PackedInt32Array(104, 107, 145), PackedInt32Array(104, 145, 146, 147, 148, 149), PackedInt32Array(150, 60, 91, 151), PackedInt32Array(80, 88, 94, 152, 153, 81), PackedInt32Array(152, 94, 154, 155), PackedInt32Array(25, 24, 156, 157, 158), PackedInt32Array(98, 64, 42, 41), PackedInt32Array(108, 110, 142, 159), PackedInt32Array(115, 33, 160, 161), PackedInt32Array(80, 161, 160, 88), PackedInt32Array(162, 163, 90, 89, 164), PackedInt32Array(123, 46, 165, 166), PackedInt32Array(126, 85, 84), PackedInt32Array(167, 168, 169, 170), PackedInt32Array(171, 172, 167, 170, 173), PackedInt32Array(79, 117, 174), PackedInt32Array(175, 79, 174, 176, 177), PackedInt32Array(178, 179, 180, 181, 182, 183), PackedInt32Array(184, 185, 186, 187), PackedInt32Array(187, 186, 188), PackedInt32Array(189, 190, 191, 192, 193), PackedInt32Array(194, 81, 153, 195), PackedInt32Array(196, 197, 198, 199), PackedInt32Array(200, 201, 202), PackedInt32Array(203, 204, 205, 206, 207), PackedInt32Array(126, 125, 208, 209), PackedInt32Array(210, 209, 208, 183), PackedInt32Array(211, 212, 213, 214), PackedInt32Array(215, 216, 217, 218, 219), PackedInt32Array(220, 221, 222), PackedInt32Array(223, 138, 141, 224), PackedInt32Array(156, 223, 224, 157), PackedInt32Array(225, 226, 227, 228), PackedInt32Array(35, 229, 36), PackedInt32Array(100, 101, 230, 231), PackedInt32Array(232, 233, 231, 230, 234), PackedInt32Array(235, 231, 233, 236), PackedInt32Array(237, 238, 235, 236, 239, 240), PackedInt32Array(46, 66, 47), PackedInt32Array(241, 242, 243, 244, 245), PackedInt32Array(246, 181, 180, 247), PackedInt32Array(248, 246, 247, 249, 250), PackedInt32Array(251, 252, 225), PackedInt32Array(76, 75, 253), PackedInt32Array(45, 44, 234, 254), PackedInt32Array(255, 62, 61, 256, 38, 37), PackedInt32Array(257, 258, 259, 260, 261), PackedInt32Array(211, 214, 35, 262), PackedInt32Array(263, 264, 265, 266), PackedInt32Array(267, 268, 51, 55), PackedInt32Array(269, 270, 271, 272), PackedInt32Array(273, 71, 70, 274), PackedInt32Array(275, 273, 274, 276), PackedInt32Array(164, 89, 277, 278), PackedInt32Array(279, 280, 281, 282), PackedInt32Array(228, 283, 251, 225), PackedInt32Array(284, 285, 286, 287, 288), PackedInt32Array(32, 31, 289, 87), PackedInt32Array(290, 87, 289, 291), PackedInt32Array(44, 43, 123, 122), PackedInt32Array(292, 293, 114), PackedInt32Array(282, 294, 279), PackedInt32Array(282, 281, 139, 134), PackedInt32Array(295, 296, 29, 28, 297, 298), PackedInt32Array(299, 300, 301, 150), PackedInt32Array(302, 303, 304, 305, 306), PackedInt32Array(307, 308, 309, 22), PackedInt32Array(146, 310, 311, 312), PackedInt32Array(147, 146, 312), PackedInt32Array(147, 312, 199, 313, 266), PackedInt32Array(183, 182, 314, 210), PackedInt32Array(315, 210, 314, 316, 218), PackedInt32Array(218, 316, 219), PackedInt32Array(215, 219, 248, 250), PackedInt32Array(317, 103, 102, 318), PackedInt32Array(319, 318, 102, 320, 321), PackedInt32Array(322, 321, 320, 323), PackedInt32Array(324, 322, 323), PackedInt32Array(325, 326, 327, 328), PackedInt32Array(329, 325, 328, 330), PackedInt32Array(331, 177, 195, 155, 154), PackedInt32Array(332, 333, 324, 334), PackedInt32Array(334, 324, 323, 258), PackedInt32Array(335, 336, 337, 338, 70), PackedInt32Array(339, 340, 341, 342), PackedInt32Array(343, 344, 93, 92), PackedInt32Array(345, 346, 255, 37), PackedInt32Array(347, 348, 349, 69), PackedInt32Array(230, 254, 234), PackedInt32Array(350, 233, 232, 121), PackedInt32Array(351, 352, 353, 354), PackedInt32Array(355, 356, 357, 202), PackedInt32Array(114, 113, 358, 359, 292), PackedInt32Array(360, 292, 359, 361), PackedInt32Array(163, 162, 362, 363), PackedInt32Array(288, 158, 364, 365, 284), PackedInt32Array(157, 364, 158), PackedInt32Array(25, 158, 366), PackedInt32Array(367, 25, 366, 368), PackedInt32Array(369, 367, 368, 370, 371), PackedInt32Array(298, 297, 372, 373), PackedInt32Array(143, 168, 37, 374, 375, 376, 377), PackedInt32Array(378, 379, 380, 381), PackedInt32Array(222, 382, 383, 384), PackedInt32Array(376, 385, 386, 387), PackedInt32Array(388, 389, 390, 20, 56, 391), PackedInt32Array(392, 393, 394, 377), PackedInt32Array(395, 396, 250, 397, 124), PackedInt32Array(398, 399, 52, 400), PackedInt32Array(277, 57, 59, 401, 278), PackedInt32Array(205, 278, 401, 402), PackedInt32Array(205, 402, 206), PackedInt32Array(137, 203, 207, 403, 133), PackedInt32Array(404, 140, 139), PackedInt32Array(404, 139, 284, 365), PackedInt32Array(170, 405, 173), PackedInt32Array(406, 407, 171, 173, 408, 409), PackedInt32Array(70, 69, 349, 335), PackedInt32Array(83, 129, 82), PackedInt32Array(250, 249, 397), PackedInt32Array(128, 395, 124), PackedInt32Array(410, 128, 127, 411, 412), PackedInt32Array(308, 413, 414), PackedInt32Array(415, 416, 417, 418), PackedInt32Array(373, 372, 419), PackedInt32Array(420, 373, 419, 421, 422), PackedInt32Array(423, 424, 425, 426), PackedInt32Array(194, 195, 177, 176), PackedInt32Array(175, 177, 427, 428), PackedInt32Array(245, 428, 427, 241), PackedInt32Array(127, 245, 244, 411), PackedInt32Array(123, 166, 118), PackedInt32Array(119, 118, 429, 430), PackedInt32Array(430, 429, 431, 432), PackedInt32Array(432, 431, 433, 434), PackedInt32Array(55, 435, 228, 227, 267), PackedInt32Array(52, 51, 400), PackedInt32Array(398, 400, 275), PackedInt32Array(398, 275, 276, 338, 436), PackedInt32Array(371, 370, 437, 438, 439), PackedInt32Array(309, 308, 414, 150, 440), PackedInt32Array(441, 378, 381, 442, 443), PackedInt32Array(240, 444, 237), PackedInt32Array(437, 288, 287, 438), PackedInt32Array(371, 439, 445, 446), PackedInt32Array(193, 446, 445, 447, 189), PackedInt32Array(448, 331, 154, 449, 450), PackedInt32Array(243, 242, 448, 450, 451, 452), PackedInt32Array(452, 451, 412), PackedInt32Array(453, 454, 299, 150), PackedInt32Array(136, 135, 455), PackedInt32Array(27, 456, 136, 455, 457, 23), PackedInt32Array(421, 28, 25, 422), PackedInt32Array(458, 420, 422), PackedInt32Array(458, 422, 306, 305), PackedInt32Array(388, 391, 459, 460), PackedInt32Array(461, 462, 463, 464), PackedInt32Array(465, 205, 204), PackedInt32Array(466, 467, 468, 469, 470), PackedInt32Array(471, 472, 473, 474), PackedInt32Array(86, 49, 48, 83), PackedInt32Array(475, 86, 85, 476), PackedInt32Array(475, 476, 477), PackedInt32Array(290, 291, 461), PackedInt32Array(478, 479, 480, 481, 482), PackedInt32Array(418, 483, 478, 482, 484), PackedInt32Array(485, 187, 188, 486), PackedInt32Array(50, 165, 46), PackedInt32Array(487, 50, 49), PackedInt32Array(487, 49, 488, 434), PackedInt32Array(220, 222, 384), PackedInt32Array(489, 302, 306, 192, 191), PackedInt32Array(130, 132, 436, 338), PackedInt32Array(490, 491, 492, 259, 493, 494), PackedInt32Array(495, 496, 345, 37), PackedInt32Array(202, 357, 497, 200), PackedInt32Array(95, 63, 498), PackedInt32Array(95, 498, 360, 361), PackedInt32Array(499, 500, 501, 381), PackedInt32Array(259, 258, 323, 493), PackedInt32Array(106, 105, 191, 190, 502), PackedInt32Array(503, 96, 74, 460, 459), PackedInt32Array(330, 302, 489, 104), PackedInt32Array(142, 504, 159), PackedInt32Array(108, 159, 505), PackedInt32Array(150, 151, 363, 362), PackedInt32Array(150, 362, 465), PackedInt32Array(290, 461, 464, 506), PackedInt32Array(507, 508, 509), PackedInt32Array(434, 433, 487), PackedInt32Array(510, 434, 488), PackedInt32Array(511, 261, 260, 474, 441), PackedInt32Array(108, 505, 512, 513), PackedInt32Array(514, 490, 494), PackedInt32Array(120, 350, 121), PackedInt32Array(239, 120, 119, 515), PackedInt32Array(240, 239, 515), PackedInt32Array(240, 515, 510, 516), PackedInt32Array(517, 516, 510, 488), PackedInt32Array(517, 488, 475), PackedInt32Array(517, 475, 477, 509), PackedInt32Array(411, 452, 412), PackedInt32Array(410, 412, 290), PackedInt32Array(518, 343, 92), PackedInt32Array(518, 92, 502, 272), PackedInt32Array(269, 272, 502, 190), PackedInt32Array(106, 502, 406), PackedInt32Array(150, 465, 204), PackedInt32Array(381, 200, 497, 220, 150, 204, 296, 295, 519), PackedInt32Array(381, 519, 326), PackedInt32Array(381, 326, 325, 499), PackedInt32Array(381, 501, 149, 148, 442), PackedInt32Array(149, 329, 330), PackedInt32Array(143, 169, 168), PackedInt32Array(338, 337, 40, 130), PackedInt32Array(409, 106, 406), PackedInt32Array(40, 262, 35), PackedInt32Array(40, 39, 130), PackedInt32Array(398, 436, 150, 414), PackedInt32Array(53, 307, 22, 21), PackedInt32Array(19, 22, 76, 503), PackedInt32Array(339, 342, 410, 506), PackedInt32Array(406, 95, 361, 407), PackedInt32Array(520, 409, 408, 494), PackedInt32Array(512, 144, 143), PackedInt32Array(464, 31, 34, 381), PackedInt32Array(168, 495, 37), PackedInt32Array(509, 477, 185, 507), PackedInt32Array(482, 507, 185, 184), PackedInt32Array(482, 184, 521), PackedInt32Array(482, 521, 485), PackedInt32Array(484, 514, 494, 522), PackedInt32Array(149, 330, 104), PackedInt32Array(441, 443, 523), PackedInt32Array(441, 523, 524), PackedInt32Array(441, 524, 511), PackedInt32Array(387, 392, 377, 376), PackedInt32Array(377, 351, 354, 512), PackedInt32Array(199, 198, 313), PackedInt32Array(147, 266, 265), PackedInt32Array(147, 265, 261), PackedInt32Array(511, 147, 261), PackedInt32Array(473, 441, 474), PackedInt32Array(512, 143, 377), PackedInt32Array(512, 354, 513), PackedInt32Array(108, 513, 522, 408), PackedInt32Array(494, 408, 522), PackedInt32Array(484, 522, 426, 425), PackedInt32Array(484, 425, 415), PackedInt32Array(484, 415, 418), PackedInt32Array(474, 484, 482), PackedInt32Array(471, 474, 482, 485), PackedInt32Array(486, 471, 485), PackedInt32Array(506, 486, 188, 339), PackedInt32Array(506, 410, 290), PackedInt32Array(381, 506, 464), PackedInt32Array(381, 34, 200), PackedInt32Array(150, 220, 384, 467), PackedInt32Array(150, 467, 466), PackedInt32Array(150, 466, 453), PackedInt32Array(150, 301, 440), PackedInt32Array(309, 440, 78, 77), PackedInt32Array(525, 74, 78, 526), PackedInt32Array(525, 526, 527, 528), PackedInt32Array(528, 527, 388, 460), PackedInt32Array(503, 459, 19), PackedInt32Array(503, 76, 253)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-882, -1044, 64144, 3228, 62178, 30011, -678, 31571), PackedVector2Array(255, 499, 307, 496, 304, 520, 460, 525, 456, 555)])
 
 [node name="Simulation" type="Node2D"]
@@ -16,134 +16,274 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-882, -1044, 64144, 322
 position = Vector2(1, 0)
 navigation_polygon = SubResource("NavigationPolygon_k5g32")
 
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+[node name="Obstacles" type="Node2D" parent="NavigationRegion2D"]
 position = Vector2(-1, 0)
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(14094, 16475, 14537, 16677, 14517, 17121, 15949, 17161, 15928, 16677, 16211, 16738, 16271, 15971, 18650, 15931, 18650, 16415, 19214, 17121, 20646, 17141, 20605, 16657, 20948, 16697, 20928, 16072, 23307, 15992, 23891, 17020, 25383, 17020, 25564, 16455, 28205, 16455, 28528, 16596, 28528, 17000, 29878, 16979, 29999, 16516, 30382, 16536, 30201, 10045, 31189, 10065, 31108, 6053, 20746, 6194, 20726, 8311, 17219, 8432, 17017, 6053, 13066, 6114, 13106, 9984, 13953, 10025)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(5136, 13613, 11345, 13541, 11417, 17640, 7413, 17736, 7413, 18215, 8037, 18215, 8037, 20421, 6023, 20493, 6047, 18215, 5208, 17928)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
-vertices = PackedVector2Array(14342, 18383, 18633, 18407, 18609, 19438, 14437, 19486)
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(14361, 18421, 14795, 18435, 15073, 18044, 18611, 17994, 18609, 19438, 14361, 19503)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
-vertices = PackedVector2Array(18968, 18455, 20766, 18455, 20838, 19558, 18896, 19534)
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(18952, 18478, 19102.3, 18476.1, 19081, 17958, 20775, 17958, 23950, 17973, 23943, 18485, 20794.9, 18464.5, 20838, 19558, 19002, 19574)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
-vertices = PackedVector2Array(21102, 18551, 22540, 18575, 23212, 19534, 21150, 19582)
+[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(21110, 18457, 22505, 18457, 23230, 19570, 21168, 19538)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D6" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D6" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(5352, 21116, 12136, 21068, 12232, 22746, 11800, 22914, 11177, 23537, 11249, 23777, 7989, 23897, 5519, 23681)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D7" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D7" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(16, 25199, 238, 25239, 520, 25945, 2657, 26025, 3020, 25138, 4431, 25159, 5842, 25138, 5842, 25844, 6930, 25985, 7112, 25058, 8503, 25038, 8583, 25904, 11023, 25925, 11164, 25058, 12555, 24997, 12797, 28787, 11144, 28848, 11023, 26973, 8604, 26953, 8624, 28928, 7092, 29089, 6870, 26912, 4532, 26973, 4552, 28908, 2999, 28928, 2717, 26932, 399, 27033, 480, 28989, 16, 29069)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D8" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D8" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(-2208, 29900, 33110, 29981, 65789, 25889, 65803, 30029, -2549, 31501)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D9" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D9" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(271, 33066, 404, -2552, -1970, -2552, -1643, 32972)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D10" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D10" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(-366, 7069, 12382, 2007, 15807, 1398, 46670, 2464, 60864, 4176, 63832, 7639, 65849, 4253, 10137, -2996, -736, 4555)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D11" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D11" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(64045, 3085, 62414, 2989, 62031, 28161, 67113, 27921)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D12" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D12" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(2940, 9912, 4536, 9769, 4764, 5208, 2526, 6120)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D13" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
-vertices = PackedVector2Array(6805, 10956, 8884, 10938, 8870, 6191, 8591, 5574, 6817, 5586)
+[node name="NavigationObstacle2D13" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(5892, 12539, 7944, 12501, 7906, 10933, 8884, 10938, 8838, 12359, 10073, 12425, 10140, 9071, 9446, 8900, 9161, 8871, 9180, 8643, 9009, 8396, 8866, 8425, 8866.72, 8025.49, 9018, 8035, 9123, 7778, 9332, 7731, 9370, 7398, 10130, 7550, 10149, 6581, 9113, 5802, 7089, 4405, 5303, 4994, 5407, 6762)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D14" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D14" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(34188, 28628, 44532, 27443, 44317, 25036, 42521, 25180, 43131, 24569, 42090, 16380, 34044, 17349, 35193, 25467, 33757, 25611, 34044, 27371)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D15" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D15" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(14243, 25731, 14288, 27925, 19696, 27903, 19719, 25640)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D16" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D16" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(18813, 28120, 18870, 29319, 20582, 29224, 20582, 27740, 19688, 27702)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D17" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D17" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(21020, 25495, 21115, 28311, 21210, 29414, 29601, 29357, 29868, 28425, 30553, 28254, 30515, 25590, 29087, 25571, 29011, 27264, 23246, 27454, 22561, 27150, 22466, 25571)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D18" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D18" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(47278, 27184, 57415, 25849, 56894, 22863, 56080, 23157, 55288, 16731, 58207, 16301, 59451, 26076, 63049, 25533, 63049, 13721, 57845, 14400, 58094, 15463, 55310, 15916, 55107, 14920, 52776, 15192, 52821, 16052, 50106, 16572, 49948, 15645, 47572, 15961, 48613, 23677, 46780, 23858)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D19" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D19" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(41554, 6266, 41667, 8302, 52031, 8302, 52845, 13868, 53433, 13936, 53547, 15317, 55198, 15226, 54882, 13710, 56081, 13665, 55900, 12579, 54949, 12760, 54339, 5745)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D20" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D20" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(42243, 14686, 46822, 14134, 46486, 9963, 41908, 10418)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D21" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D21" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(41716, 5336, 41812, 3299, 33134, 2987, 33086, 4761, 34021, 4809, 34068, 16220, 36154, 16220, 36322, 5408)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D22" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D22" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(17563, 3466, 18792, 3426, 18813, 1612, 17442, 1652)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D23" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D23" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(18329, 7558, 19982, 7700, 20083, 4514, 18389, 4454)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D24" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D24" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(21131, 3567, 22683, 3587, 22643, 1934, 21232, 1813)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D25" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D25" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(28993, 4595, 30787, 4595, 30767, 2378, 29033, 2337)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D26" type="NavigationObstacle2D" parent="NavigationRegion2D"]
-position = Vector2(-1, 0)
+[node name="NavigationObstacle2D26" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(11285, 19468, 11628, 19284, 11980, 19460, 12076, 19795, 11852, 20123, 11476, 20107, 11237, 19827)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D27" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(14311, 19973, 15201, 19966, 15179.3, 20163.3, 15614, 20165, 15628, 19966, 17223, 20002, 17771, 20023, 17720.6, 20198.9, 18226.3, 20204.7, 18226, 20009, 19009, 20009, 19017, 20215, 19351.1, 20217.5, 19344, 20009, 19914, 20009, 19920, 20224, 19931, 22582, 18416, 22592, 18427, 22976, 17158, 22976, 16592, 23019, 15564, 23063, 14930, 23084, 14951, 22508, 14709, 22508, 14709, 23063, 14282, 23056, 14288, 22528)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D28" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(14470, 23446, 16166, 23435, 19906, 23373, 19882, 24676, 17948, 25139, 16166, 25067, 14619, 25120, 14502, 24811)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D29" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(22587, 21739, 23259, 21750, 23291, 21568, 28539, 21494, 28592, 22251, 28838, 22304, 28902, 23979, 28582, 24064, 23398, 24182, 23366, 23947, 22843, 23894, 22832, 23531, 22619, 23552)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D30" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(21144, 19713, 23358, 19737, 22683, 20299, 22267, 20843, 21883, 21366, 21275, 22486)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D31" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(23357, 20834, 22646, 20851, 22477, 20995, 22257, 21274, 21960, 21824, 21376, 22832, 21376, 24068, 22841, 24076, 22841, 23543, 22587, 23560, 22561, 21723, 23289, 21740)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D32" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(20490, 19745, 20839, 19738, 20960, 23938, 20561, 23946)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D33" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(23070, 18826, 23949, 18818, 23965, 19394, 23493, 19402)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D34" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(23406, 19905, 23885, 19913, 23909, 20688, 22710, 20696, 23014, 20241)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D35" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(24372, 17971, 24540, 19354, 25291, 19338, 25499, 19546, 26714, 19538, 26938, 19258, 27857, 19274, 28184, 19562, 28392, 19242, 28392, 19242, 28352, 17900)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D36" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(23334, 21248, 24293, 21256, 24333, 21104, 27465, 21040, 27481, 21503, 23286, 21575)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D37" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(26578, 19737, 26986, 20105, 27593, 20089, 27257, 20656, 26762, 20640, 25283, 20017, 25491, 19761)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D38" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(27105, 20768, 27018, 20880, 24444, 20904, 24388, 20680, 24908, 20057, 26530, 20744)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D39" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(28512, 21479, 28508.8, 21139.4, 27695, 21189, 27660, 20470, 27959, 20007, 28496, 19793, 28792, 19554, 29335, 19578, 29814, 20057, 29822, 22390, 28871, 22454, 28847, 22295, 28592, 22239)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D40" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(28855, 22838, 29886, 22854, 30877, 23941, 28887, 23965)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D41" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D42" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(30950, 24272, 30995, 24555, 20734, 24713, 20745, 24431)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D43" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(30532, 28228, 32171, 28250, 32204, 25391, 31922, 24939, 31131, 24894, 29052, 24928, 29063, 25572, 30475, 25561)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D44" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(26701, 27301, 26656, 25403, 27955, 25391, 27933, 24894, 20960, 24973, 21005, 25527, 22486, 25583, 22553, 27154, 23141, 27425)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D45" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(14801, 28770, 17208, 28736, 17434, 28883, 18237, 28872, 18214, 29188, 14858, 29200)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D46" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(30550, 18206, 29988, 18790, 30094, 22720, 30593, 23076)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D47" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(30949, 18384, 32152, 18406, 32216, 23624, 31703, 23617, 30963, 23069)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D48" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(8315, 4814, 8705, 4376, 10795, 5878, 10387, 6467)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D49" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(9569, 7664, 10121, 7816, 10092, 8795, 9427, 8662, 9807, 8596, 9978, 8339, 9959, 8083, 9826, 7816)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D50" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(9474, 7902, 9664, 7997, 9740, 8178, 9626, 8396, 9370, 8406, 9237, 8216, 9303, 8016)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D51" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(8119, 4423, 7863, 4062, 9155, 3616, 9906, 2817, 11588, 2314, 11407, 3226, 10533, 3197, 10181, 3283, 9849, 3502, 9640, 3644, 9079, 3977)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D52" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(10391, 3521, 10809, 3368, 11341, 3406, 11132, 4699, 10961, 4765)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D53" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(10219, 3616, 9051, 4281, 10514, 5326, 10514, 5069, 10771, 4813)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D54" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(11569, 3502, 12025, 3606, 12424, 3882, 11493, 4822, 11350, 4708)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D55" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(11626, 5031, 11749, 5535, 12728, 5336, 12747, 4110, 12576, 4005)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D56" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(10932, 5098, 11189, 5050, 11398, 5222, 11398, 5440, 11198, 5640, 10970, 5630, 10799, 5440, 10799, 5212)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D57" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(11103, 5963, 12709, 5630, 12738, 6162, 11208, 6438)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D58" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(10847, 6904, 12795, 6438, 12880, 8766, 12149, 9393, 11721, 9308, 11426, 9460, 10828, 9127)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D59" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(12962, 1919, 13058, 6062, 13561, 6122, 13441, 1800)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D60" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(10819, 9450, 11190, 9594, 11190, 9762, 10831, 9762)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D61" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(10723, 10073, 11070, 10085, 11537, 10396, 11908, 10564, 12232, 10540, 12842, 11139, 12866, 11510, 10747, 11582)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D62" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(12339, 10001, 12794, 10049, 12794, 10468, 12363, 10300)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D63" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(11609, 9762, 11849, 9630, 11980, 9774, 11992, 10013, 11777, 10157, 11585, 9977)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D64" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(12339, 9570, 12854, 9151, 12854, 9762, 12495, 9786)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D65" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(11513, 11847, 11535, 12444, 12335, 12476, 12463, 13084, 12516, 16882, 12889, 16871, 12815, 11804)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D66" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(13103, 10375, 13444, 10407, 13519, 16850, 13167, 16850)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D67" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+vertices = PackedVector2Array(12071, 3485, 12495, 3761, 12703, 3633, 12723, 2054, 12327, 2081, 11796, 2323, 11702, 3358)
 affect_navigation_mesh = true
 
 [node name="Agents" type="Node2D" parent="."]
@@ -175,5 +315,3 @@ z_index = -1
 position = Vector2(31466, 16305)
 scale = Vector2(39.431, 39.431)
 texture = ExtResource("6_iowt4")
-
-[node name="Obstacles" type="Node2D" parent="."]
