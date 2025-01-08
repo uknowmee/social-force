@@ -35,19 +35,25 @@ polygon = PackedVector2Array(819, 86, 919, 86, 974, 578, 811, 530)
 
 [node name="Agent" parent="Agents" instance=ExtResource("2_cc3an")]
 position = Vector2(356, 554)
-targets = Array[NodePath]([NodePath("../../Targets/Target")])
+targets = Array[NodePath]([NodePath("../../Targets/Target"), NodePath("../../Targets/Target2"), NodePath("../../Targets/Target3")])
 
 [node name="Targets" type="Node2D" parent="."]
 
 [node name="Target" type="Marker2D" parent="Targets"]
 position = Vector2(1020, 316)
 
+[node name="Target2" type="Marker2D" parent="Targets"]
+position = Vector2(614, 326)
+
+[node name="Target3" type="Marker2D" parent="Targets"]
+position = Vector2(242, 416)
+
 [node name="Spawners" type="Node2D" parent="."]
 
 [node name="AgentSpawn" parent="Spawners" instance=ExtResource("3_ckmj1")]
 position = Vector2(77, 333)
 amount = 0
-targets = Array[NodePath]([NodePath("../../Targets/Target")])
+targets = Array[NodePath]([NodePath("../../Targets/Target"), NodePath("../../Targets/Target3")])
 spawn_per_second = 0.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
