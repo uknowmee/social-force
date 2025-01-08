@@ -16,107 +16,134 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-882, -1044, 64144, 322
 position = Vector2(1, 0)
 navigation_polygon = SubResource("NavigationPolygon_k5g32")
 
-[node name="Obstacles" type="Node2D" parent="NavigationRegion2D"]
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(-1, 0)
-
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
 vertices = PackedVector2Array(14094, 16475, 14537, 16677, 14517, 17121, 15949, 17161, 15928, 16677, 16211, 16738, 16271, 15971, 18650, 15931, 18650, 16415, 19214, 17121, 20646, 17141, 20605, 16657, 20948, 16697, 20928, 16072, 23307, 15992, 23891, 17020, 25383, 17020, 25564, 16455, 28205, 16455, 28528, 16596, 28528, 17000, 29878, 16979, 29999, 16516, 30382, 16536, 30201, 10045, 31189, 10065, 31108, 6053, 20746, 6194, 20726, 8311, 17219, 8432, 17017, 6053, 13066, 6114, 13106, 9984, 13953, 10025)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(5136, 13613, 11345, 13541, 11417, 17640, 7413, 17736, 7413, 18215, 8037, 18215, 8037, 20421, 6023, 20493, 6047, 18215, 5208, 17928)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(14342, 18383, 18633, 18407, 18609, 19438, 14437, 19486)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(18968, 18455, 20766, 18455, 20838, 19558, 18896, 19534)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(21102, 18551, 22540, 18575, 23212, 19534, 21150, 19582)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D6" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D6" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(5352, 21116, 12136, 21068, 12232, 22746, 11800, 22914, 11177, 23537, 11249, 23777, 7989, 23897, 5519, 23681)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D7" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D7" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(16, 25199, 238, 25239, 520, 25945, 2657, 26025, 3020, 25138, 4431, 25159, 5842, 25138, 5842, 25844, 6930, 25985, 7112, 25058, 8503, 25038, 8583, 25904, 11023, 25925, 11164, 25058, 12555, 24997, 12797, 28787, 11144, 28848, 11023, 26973, 8604, 26953, 8624, 28928, 7092, 29089, 6870, 26912, 4532, 26973, 4552, 28908, 2999, 28928, 2717, 26932, 399, 27033, 480, 28989, 16, 29069)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D8" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D8" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(-2208, 29900, 33110, 29981, 65789, 25889, 65803, 30029, -2549, 31501)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D9" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D9" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(271, 33066, 404, -2552, -1970, -2552, -1643, 32972)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D10" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D10" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(-366, 7069, 12382, 2007, 15807, 1398, 46670, 2464, 60864, 4176, 63832, 7639, 65849, 4253, 10137, -2996, -736, 4555)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D11" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D11" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(64045, 3085, 62414, 2989, 62031, 28161, 67113, 27921)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D12" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D12" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(2940, 9912, 4536, 9769, 4764, 5208, 2526, 6120)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D13" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D13" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(6805, 10956, 8884, 10938, 8870, 6191, 8591, 5574, 6817, 5586)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D14" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D14" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(34188, 28628, 44532, 27443, 44317, 25036, 42521, 25180, 43131, 24569, 42090, 16380, 34044, 17349, 35193, 25467, 33757, 25611, 34044, 27371)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D15" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D15" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(14243, 25731, 14288, 27925, 19696, 27903, 19719, 25640)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D16" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D16" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(18813, 28120, 18870, 29319, 20582, 29224, 20582, 27740, 19688, 27702)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D17" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D17" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(21020, 25495, 21115, 28311, 21210, 29414, 29601, 29357, 29868, 28425, 30553, 28254, 30515, 25590, 29087, 25571, 29011, 27264, 23246, 27454, 22561, 27150, 22466, 25571)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D18" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D18" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(47278, 27184, 57415, 25849, 56894, 22863, 56080, 23157, 55288, 16731, 58207, 16301, 59451, 26076, 63049, 25533, 63049, 13721, 57845, 14400, 58094, 15463, 55310, 15916, 55107, 14920, 52776, 15192, 52821, 16052, 50106, 16572, 49948, 15645, 47572, 15961, 48613, 23677, 46780, 23858)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D19" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D19" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(41554, 6266, 41667, 8302, 52031, 8302, 52845, 13868, 53433, 13936, 53547, 15317, 55198, 15226, 54882, 13710, 56081, 13665, 55900, 12579, 54949, 12760, 54339, 5745)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D20" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D20" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(42243, 14686, 46822, 14134, 46486, 9963, 41908, 10418)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D21" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D21" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(41716, 5336, 41812, 3299, 33134, 2987, 33086, 4761, 34021, 4809, 34068, 16220, 36154, 16220, 36322, 5408)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D22" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D22" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(17563, 3466, 18792, 3426, 18813, 1612, 17442, 1652)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D23" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D23" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(18329, 7558, 19982, 7700, 20083, 4514, 18389, 4454)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D24" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D24" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(21131, 3567, 22683, 3587, 22643, 1934, 21232, 1813)
 affect_navigation_mesh = true
 
-[node name="NavigationObstacle2D25" type="NavigationObstacle2D" parent="NavigationRegion2D/Obstacles"]
+[node name="NavigationObstacle2D25" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
 vertices = PackedVector2Array(28993, 4595, 30787, 4595, 30767, 2378, 29033, 2337)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D26" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(-1, 0)
+vertices = PackedVector2Array(11285, 19468, 11628, 19284, 11980, 19460, 12076, 19795, 11852, 20123, 11476, 20107, 11237, 19827)
 affect_navigation_mesh = true
 
 [node name="Agents" type="Node2D" parent="."]
@@ -148,3 +175,5 @@ z_index = -1
 position = Vector2(31466, 16305)
 scale = Vector2(39.431, 39.431)
 texture = ExtResource("6_iowt4")
+
+[node name="Obstacles" type="Node2D" parent="."]

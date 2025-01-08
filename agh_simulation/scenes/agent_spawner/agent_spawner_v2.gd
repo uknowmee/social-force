@@ -51,7 +51,7 @@ func _spawn_child() -> void:
 	instance.maximumVelocity = instance.maximumVelocity + randf_range(-randomize_max_speed, randomize_max_speed)
 	instance.relaxationTime = instance.relaxationTime + randf_range(-randomize_relaxation_time, randomize_relaxation_time)
 	instance.rotationSpeed = instance.rotationSpeed + randf_range(-randomize_rotation_speed, randomize_rotation_speed)
-	agentContainer.add_child(instance)
+	agentContainer.add_child.call_deferred(instance)
 
 
 func _get_random_pos() -> Vector2:
