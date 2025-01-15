@@ -1,19 +1,17 @@
 extends Camera2D
 
-@export var scroll_speed := 300
-@export var zoom_speed := 0.01
-@export var max_zoom := 0.03
-@export var min_zoom := 0.01
+@export var offset_value := Vector2(576, 324)
+@export var zoom_value := Vector2.ONE
 
 var target_position := Vector2.ZERO
 var dragging := false
 var drag_start := Vector2.ZERO
-var change := Vector2(0.02, 0.02)
+var change := Vector2(0.01, 0.01)
 
 
 func _ready() -> void:
-	offset = (get_viewport() as Window).size / 2
-	zoom = Vector2.ONE
+	offset = offset_value
+	zoom = zoom_value
 
 
 func _process(_delta: float) -> void:
