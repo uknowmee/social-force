@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bga42nqtdnwo1"]
+[gd_scene load_steps=7 format=3 uid="uid://bga42nqtdnwo1"]
 
 [ext_resource type="PackedScene" uid="uid://b55rykw31hnqk" path="res://scenes/agent/agent_v2.tscn" id="2_sll7p"]
-[ext_resource type="PackedScene" uid="uid://bnr042bo878t0" path="res://scenes/agent/agent.tscn" id="2_xpv8d"]
 [ext_resource type="Script" path="res://scripts/camera_2d.gd" id="4_epjx3"]
 [ext_resource type="PackedScene" uid="uid://c47fm45tavgab" path="res://scenes/agent_spawner/agent_spawner_v2.tscn" id="5_540mv"]
 [ext_resource type="Texture2D" uid="uid://bredly570fjym" path="res://assets/agh.png" id="6_iowt4"]
@@ -462,10 +461,6 @@ affect_navigation_mesh = true
 
 [node name="Agent_V2" parent="Agents" instance=ExtResource("2_sll7p")]
 position = Vector2(13718, 18035)
-targets = Array[NodePath]([NodePath("../../Targets/B1-backdoor"), NodePath("../../Targets/C7"), NodePath("../../Targets/Library")])
-
-[node name="Agent" parent="Agents" instance=ExtResource("2_xpv8d")]
-position = Vector2(13717, 17850)
 targets = Array[NodePath]([NodePath("../../Targets/B1-backdoor"), NodePath("../../Targets/C7"), NodePath("../../Targets/Library")])
 
 [node name="Targets" type="Node2D" parent="."]
