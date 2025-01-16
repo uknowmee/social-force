@@ -531,83 +531,97 @@ zoom_value = Vector2(0.05, 0.05)
 [node name="B4" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(15177, 17215)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/B1-backdoor"), NodePath("../../Targets/C7"), NodePath("../../Targets/Library")])
+spawn_per_second = 1.0
 
 [node name="B5" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(9074, 8129)
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/B1-backdoor"), NodePath("../../Targets/C7"), NodePath("../../Targets/Library")])
+spawn_per_second = 1.0
 
 [node name="B8" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(11999, 23380)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/B1-backdoor"), NodePath("../../Targets/C7"), NodePath("../../Targets/Library")])
+spawn_per_second = 1.0
 
 [node name="B3" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(19868, 17205)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/Library")])
+spawn_per_second = 1.0
 
 [node name="B2" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(24486, 17149)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="B1" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(29232, 17081)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="A4" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(34838, 17156)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="C4" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(34825, 16806)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="Library" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(43436, 14681)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="A2" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(48632, 15550)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="C2" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(49741, 8639)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="C3" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(45250, 5779)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="C1" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(56045, 13206)
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/C7")])
+spawn_per_second = 1.0
 
 [node name="D2" parent="Spawners" instance=ExtResource("5_540mv")]
 position = Vector2(27692, 21506)
 rotation = 1.5708
-amount = 30
+amount = 0
 targets = Array[NodePath]([NodePath("../../Targets/U12")])
+spawn_per_second = 1.0
 
 [node name="Stats" parent="." instance=ExtResource("6_mbvim")]

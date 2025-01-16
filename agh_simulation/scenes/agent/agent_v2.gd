@@ -7,7 +7,7 @@ class_name AgentV2
 @export var maximumVelocity := 70.0
 @export var weight := 1.0
 @export var maximumRaycastAngle := 180
-@export var raycastPlacementDensity := 18
+@export var raycastPlacementDensity := 25
 @export var raycastDistance := 150
 @export var relaxationTime := 1.5
 @export var rotationSpeed := 0.1
@@ -44,7 +44,8 @@ func _ready() -> void:
 		modulateColor = Color(randf(), randf(), randf())
 
 	_generate_raycasts()
-
+	best_ray = rays[0]
+	
 	currentTarget = targetNodes.pop_front()
 	nav.target_position = currentTarget.position
 	
@@ -74,14 +75,41 @@ func _process(_dt: float) -> void:
 			nav.target_position = currentTarget.position
 		else:
 			queue_free()
+	
+var best_ray: RayCast2D
+var cached_heuristics := {}
+var heuristic_cache_timer := 0.0
+const HEURISTIC_CACHE_UPDATE_INTERVAL := 0.1
 
+var speed_cache: float = 0
+var speed_cache_timer := 0.0
+const SPEED_CACHE_UPDATE_INTERVAL := 0.3
 
 func _physics_process(_delta: float) -> void:
-	desired_direction = _get_desired_direction()
-	rotation = lerp(rotation, desired_direction, rotationSpeed)
-	desired_velocity = Vector2(_get_desired_speed(), 0).rotated(rotation)
-		
-	velocity = lerp(velocity, desired_velocity, 0.2)
+	heuristic_cache_timer += _delta
+	speed_cache_timer += _delta
+	
+	if heuristic_cache_timer >= HEURISTIC_CACHE_UPDATE_INTERVAL or cached_heuristics.size() == 0:
+		heuristic_cache_timer = 0.0
+		_update_heuristics()
+
+		best_ray = rays[0]
+		var best_distance: float = cached_heuristics[best_ray]
+		for i in range(1, rays.size()):
+			var ray := rays[i]
+			var distance: float = cached_heuristics[ray]
+			if distance > best_distance:
+				best_distance = distance
+				best_ray = ray
+
+	desired_direction = best_ray.rotation + rotation
+	rotation = lerp_angle(rotation, desired_direction, rotationSpeed)
+	
+	if speed_cache_timer >= SPEED_CACHE_UPDATE_INTERVAL:
+		speed_cache_timer = 0.0
+		speed_cache = _get_desired_speed()
+	
+	velocity = velocity.lerp(Vector2(speed_cache, 0).rotated(rotation), 0.2)
 	move_and_slide()
 
 
@@ -90,24 +118,16 @@ func _get_desired_speed() -> float:
 	return min(maximumVelocity, dist)
 
 
-func _get_desired_direction() -> float:
-	var best_ray: RayCast2D
-	var best_distance: float
-	for ray in rays:
-		var distance := _cognitive_heuristic(ray)
-		if best_distance == null or distance > best_distance:
-			best_distance = distance
-			best_ray = ray
-	return best_ray.rotation + rotation
-
-
 # d(alpha)
-func _cognitive_heuristic(ray: RayCast2D) -> float:
-	var dist_to_collision := _raycast_distance_to_collision(ray)
-	var direction_to_target: float = _get_tmp_target().angle_to_point(position)
-	var global_angle := ray.rotation + rotation
-	var penalty: float = 2 * raycastDistance * dist_to_collision * cos(direction_to_target - global_angle)
-	return sqrt(pow(raycastDistance, 2) + pow(dist_to_collision, 2) - penalty)
+func _update_heuristics() -> void:
+	var tmp_target := _get_tmp_target()
+	var dir_to_target := tmp_target.angle_to_point(position)
+
+	for ray in rays:
+		var dist := _raycast_distance_to_collision(ray)
+		var global_angle := ray.rotation + rotation
+		var penalty := 2 * raycastDistance * dist * cos(dir_to_target - global_angle)
+		cached_heuristics[ray] = sqrt(raycastDistance * raycastDistance + dist * dist - penalty)
 
 
 # f(alpha)
