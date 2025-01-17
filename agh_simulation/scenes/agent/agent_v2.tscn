@@ -26,5 +26,5 @@ default_color = Color(0, 0, 0, 1)
 [node name="Raycasts" type="Node2D" parent="."]
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 50.0
-path_max_distance = 50.0
+path_desired_distance = 100.0
+path_max_distance = 10.0

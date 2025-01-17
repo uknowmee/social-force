@@ -8,7 +8,7 @@ class_name AgentV2
 @export var weight := 1.0
 @export var maximumRaycastAngle := 180
 @export var raycastPlacementDensity := 35
-@export var raycastDistance := 150
+@export var raycastDistance := 150.0
 @export var relaxationTime := 1.5
 @export var rotationSpeed := 0.1
 
@@ -85,57 +85,57 @@ var speed_cache: float = 0
 var speed_cache_timer := 0.0
 const SPEED_CACHE_UPDATE_INTERVAL := 0.3
 
+var raycast_distance_squared := raycastDistance * raycastDistance
+var dir_to_target: float
+var tmp_target: Vector2
+
 func _physics_process(_delta: float) -> void:
 	heuristic_cache_timer += _delta
 	speed_cache_timer += _delta
 	
 	if heuristic_cache_timer >= HEURISTIC_CACHE_UPDATE_INTERVAL or cached_heuristics.size() == 0:
 		heuristic_cache_timer = 0.0
+		tmp_target = _get_tmp_target()
+		dir_to_target = tmp_target.angle_to_point(position)
 		_update_heuristics()
-
-		best_ray = rays[0]
-		var best_distance: float = cached_heuristics[best_ray]
-		for i in range(1, rays.size()):
-			var ray := rays[i]
-			var distance: float = cached_heuristics[ray]
-			if distance > best_distance:
-				best_distance = distance
-				best_ray = ray
+		_find_best_ray()
 
 	desired_direction = best_ray.rotation + rotation
 	rotation = lerp_angle(rotation, desired_direction, rotationSpeed)
 	
 	if speed_cache_timer >= SPEED_CACHE_UPDATE_INTERVAL:
 		speed_cache_timer = 0.0
-		speed_cache = _get_desired_speed()
+		speed_cache = min(maximumVelocity, _raycast_distance_to_collision(frontmost_ray) / relaxationTime)
 	
-	velocity = velocity.lerp(Vector2(speed_cache, 0).rotated(rotation), 0.2)
+	velocity = velocity.lerp(Vector2.RIGHT.rotated(rotation) * speed_cache, 0.2)
 	move_and_slide()
-
-
-func _get_desired_speed() -> float:
-	var dist := _raycast_distance_to_collision(frontmost_ray) / relaxationTime
-	return min(maximumVelocity, dist)
 
 
 # d(alpha)
 func _update_heuristics() -> void:
-	var tmp_target := _get_tmp_target()
-	var dir_to_target := tmp_target.angle_to_point(position)
-
 	for ray in rays:
 		var dist := _raycast_distance_to_collision(ray)
 		var global_angle := ray.rotation + rotation
-		var penalty := 2 * raycastDistance * dist * cos(dir_to_target - global_angle)
-		cached_heuristics[ray] = sqrt(raycastDistance * raycastDistance + dist * dist - penalty)
+		var angle_diff := dir_to_target - global_angle
+		var penalty := 2.0 * raycastDistance * dist * cos(angle_diff)
+		cached_heuristics[ray] = sqrt(raycast_distance_squared + dist * dist - penalty)
+
+
+func _find_best_ray() -> void:
+	best_ray = rays[0]
+	var best_distance: float = cached_heuristics[best_ray]
+
+	for i in range(1, rays.size()):
+		var ray := rays[i]
+		var distance: float = cached_heuristics[ray]
+		if distance > best_distance:
+			best_distance = distance
+			best_ray = ray
 
 
 # f(alpha)
 func _raycast_distance_to_collision(ray: RayCast2D) -> float:
-	if ray.is_colliding():
-		return position.distance_to(ray.get_collision_point())
-	else:
-		return raycastDistance
+	return position.distance_to(ray.get_collision_point()) if ray.is_colliding() else raycastDistance
 
 
 func _set_radius() -> void:
