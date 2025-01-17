@@ -16,7 +16,7 @@ var agentScene := preload("../agent/agent_v2.tscn")
 @export var randomize_rotation_speed := 0.02
 
 @export var agent_maximum_raycast_angle := 180
-@export var agent_raycast_placement_density := 25
+@export var agent_raycast_placement_density := 35
 
 @onready var agentContainer := $"../"
 @onready var collisionShape: CollisionShape2D = get_node("CollisionShape2D")

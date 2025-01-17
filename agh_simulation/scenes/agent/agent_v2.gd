@@ -7,7 +7,7 @@ class_name AgentV2
 @export var maximumVelocity := 70.0
 @export var weight := 1.0
 @export var maximumRaycastAngle := 180
-@export var raycastPlacementDensity := 25
+@export var raycastPlacementDensity := 35
 @export var raycastDistance := 150
 @export var relaxationTime := 1.5
 @export var rotationSpeed := 0.1
