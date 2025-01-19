@@ -1,6 +1,6 @@
 ---
 lang: en
-title: "Social force algorithm"
+title: "Crowd dynamics modelling"
 documentclass: scrartcl
 author:
     - Michał Pałucki
@@ -9,8 +9,10 @@ author:
 abstract: |
     This document describes the social force algorithm and its implementation in the context of a pedestrian simulation.
 bibliography:
-- ./report/bibliography.bib
+- ./docs/report/bibliography.bib
 header-includes:
 - \usepackage{graphicx}
-- \graphicspath{{./report/}}
+- \graphicspath{{./docs/report/}}
+csl:
+- ./docs/report/transactions-on-algorithms.csl
 ---
