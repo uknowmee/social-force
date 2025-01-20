@@ -1,3 +1,3 @@
 ## Framework
 
-Co zostało wykonane w kodzie?
+\todo{Co zostało wykonane w kodzie?}

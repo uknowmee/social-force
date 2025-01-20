@@ -13,6 +13,8 @@ bibliography:
 header-includes:
 - \usepackage{graphicx}
 - \graphicspath{{./docs/report/}}
+- \usepackage[colorinlistoftodos]{todonotes}
+numbersections: true
 csl:
 - ./docs/report/transactions-on-algorithms.csl
 ---

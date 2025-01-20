@@ -10,10 +10,10 @@
 
 ```bash
 # Build container
-docker build -t pandoc .
+docker build -t pandocker .
 
 # Collect artifact
-docker run --rm -u $UID:$GID -v .:/data pandoc ./report/*.md -o ./report.pdf
+docker run --rm -u $UID:$GID -v .:/data pandocker ./report/*.md -o ./report.pdf
 ```
 
 or
