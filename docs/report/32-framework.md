@@ -1,13 +1,30 @@
 # Framework
 
-To make the simulation more robust and realistic, we employed a sophisticated pathfinding algorithm. This approach significantly improved upon the previously discussed methodology that relied on raycasts, enabling more efficient and optimal crowd movement, especially in complex scenarios. The integration of Reciprocal Velocity Avoidance (RVA) played a pivotal role in implementing pathfinding. RVA is particularly effective in managing dynamic obstacles and agent-to-agent avoidance, making it an excellent choice for crowd simulation.
+To make the simulation more robust and realistic, we employed a sophisticated pathfinding algorithm. This approach significantly
+improved upon the previously discussed methodology that relied on raycasts, enabling more efficient and optimal crowd movement,
+especially in complex scenarios. The integration of Reciprocal Velocity Avoidance (RVA) played a pivotal role in implementing
+pathfinding. RVA is particularly effective in managing dynamic obstacles and agent-to-agent avoidance, making it an excellent choice
+for crowd simulation.
 
-To leverage RVA, we first modeled the collision shapes, which serve as a baseline for determining agents' movements within the environment. These collision shapes ensure that each agent has an awareness of its surroundings, allowing for smooth navigation through obstacles and other agents.
+To leverage RVA, we first modeled the collision shapes, which serve as a baseline for determining agents' movements within the
+environment. These collision shapes ensure that each agent has an awareness of its surroundings, allowing for smooth navigation through
+obstacles and other agents.
 
-At the initial stage, as soon as an agent is spawned in the simulation, the pathfinding algorithm is triggered. The algorithm calculates a precise path by partitioning the environment into manageable segments. Each agent is then tasked with navigating to the next designated point along this path, ensuring steady progress toward its final destination. This stepwise approach not only simplifies the navigation process but also enhances performance by breaking down complex paths into smaller, more manageable segments.
+At the initial stage, as soon as an agent is spawned in the simulation, the pathfinding algorithm is triggered. The algorithm
+calculates a precise path by partitioning the environment into manageable segments. Each agent is then tasked with navigating to the
+next designated point along this path, ensuring steady progress toward its final destination. This stepwise approach not only
+simplifies the navigation process but also enhances performance by breaking down complex paths into smaller, more manageable segments.
 
-Additionally, the raycast methodology is retained as a complementary system to improve interactions between agents and reaching current target at the path. While pathfinding directs agents along optimal routes, raycasts enhance their ability to react to immediate, short-range interactions, such as avoiding collisions or dynamically adjusting their paths based on nearby agents. This dual-system approach combines the strengths of long-range planning with real-time responsiveness.
+Additionally, the raycast methodology is retained as a complementary system to improve interactions between agents and reaching current
+target at the path. While pathfinding directs agents along optimal routes, raycasts enhance their ability to react to immediate,
+short-range interactions, such as avoiding collisions or dynamically adjusting their paths based on nearby agents. This dual-system
+approach combines the strengths of long-range planning with real-time responsiveness.
 
-The entire simulation was developed using Godot 4.3, a game engine well-suited for handling the computational and graphical demands of such projects. Godot provides a native implementation of Reciprocal Velocity Avoidance, which we adapted and integrated into our system. Furthermore, we implemented custom raycast functionality to align with the unique requirements of our simulation. These customizations were essential for achieving the desired level of precision and realism in agent behavior.
+The entire simulation was developed using Godot 4.3, a game engine well-suited for handling the computational and graphical demands of
+such projects. Godot provides a native implementation of Reciprocal Velocity Avoidance, which we adapted and integrated into our
+system. Furthermore, we implemented custom raycast functionality to align with the unique requirements of our simulation. These
+customizations were essential for achieving the desired level of precision and realism in agent behavior.
 
-Overall, the combination of RVA for pathfinding and raycasts for local interactions has significantly improved the efficiency and realism of the simulation. This approach ensures that agents can navigate complex environments smoothly while maintaining dynamic, responsive interactions with their surroundings and other agents.
+Overall, the combination of RVA for pathfinding and raycasts for local interactions has significantly improved the efficiency and
+realism of the simulation. This approach ensures that agents can navigate complex environments smoothly while maintaining dynamic,
+responsive interactions with their surroundings and other agents.
