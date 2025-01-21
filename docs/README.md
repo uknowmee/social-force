@@ -23,5 +23,5 @@ or
 sudo apt update && sudo apt install -y pandoc texlive-full
 
 # Collect artifact
-pandoc report/*.md -o report.pdf
+pandoc *.md -o ../report.pdf
 ```
