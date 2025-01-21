@@ -19,7 +19,7 @@ The model under consideration utilises the following variables:
 - $i, j$ - pedestrians,
 - $W$ - wall,
 - $x_i$ - position vector,
-- $r_i = $frac{m_i}{320}$ - radius,
+- $r_i = $\frac{m_i}{320}$ - radius,
 - $v_{0i}$ - pedestrian normal velocity,
 - $v_i$ - velocity vector,
 - $v_{\text{des}}$ - desired velocity,
