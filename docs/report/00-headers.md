@@ -7,7 +7,7 @@ author:
     - Marcin Kosiba
     - Piotr Sokołowski
 abstract: |
-    This document describes the social force algorithm and its implementation in the context of a pedestrian simulation.
+    This report describes the social force algorithm and its implementation in the context of a pedestrian simulation.
 bibliography:
 - ./docs/report/bibliography.bib
 header-includes:
